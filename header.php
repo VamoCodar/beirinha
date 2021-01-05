@@ -32,6 +32,14 @@
 			<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-categorias.css">
 	<?php }	?>
 
+	<?php if ( is_singular('post') ){ ?>
+	<!-- CSS Receitas -->
+		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-receita-detalhe.css">
+	<?php }?>
+
+
+	
+
 	<title>
 		<?php
 			if(!strrpos($_SERVER['REQUEST_URI'],'home')) 

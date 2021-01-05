@@ -141,6 +141,9 @@
 
 
 <script>
+//init swiper
+
+
 const botaoMenuMobile = document.querySelector(".hamburguer");
 const botaoMenuMobileA = document.querySelector(".hamburguer a");
 const menuMobile = document.querySelector(".menu-mobile");

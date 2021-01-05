@@ -484,6 +484,7 @@ a {
     margin-top: 20px;
   }
   .mapa-produto {
+    max-width:250px;
     margin-left: 10%;
     @include d(s) {
       margin-left: 1%;

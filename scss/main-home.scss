@@ -68,4 +68,27 @@ body {
   margin-top: 60px;
 }
 
-
+.form-row {
+  flex-direction: column;
+}
+.woocommerce form .form-row label, .woocommerce-page form .form-row label {
+  display: inline-block !important;
+}
+.woocommerce-billing-fields label{
+  display: contents !important;
+  margin: 16px 0 -1px 0 !important;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 10px;
+}
+#order_review_heading{
+  margin-top: 30px;
+}
+.page{
+  padding: 2%;
+}
+.page h1{
+  margin-bottom: 20px;
+}

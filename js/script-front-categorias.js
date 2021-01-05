@@ -1,13 +1,13 @@
 //função que adiciona a classe mobile ou desktop dependendo do tamanho da tela
 let body = document.querySelector("body");
-const botaoMenuMobile = document.querySelector(".hamburguer");
+/* const botaoMenuMobile = document.querySelector(".hamburguer");
 const botaoMenuMobileA = document.querySelector(".hamburguer a");
-const menuMobile = document.querySelector(".menu-mobile");
+const menuMobile = document.querySelector(".menu-mobile"); */
 const botaoCategorias = document.querySelector(".categorias-mobile");
 const aside = document.querySelector(".aside-container");
 const filtro = document.querySelector(".button-filtro");
 
-function checagem() {
+/* function checagem() {
   if (window.innerWidth >= 993) {
     body.classList.add("desktop");
     body.classList.remove("mobile");
@@ -49,12 +49,12 @@ function abreMenu() {
     body.classList.toggle("menu-open");
     body.classList.toggle("menu-closed");
   }
-}
+} */
 //filtro
 function abreFiltro() {
   body.classList.toggle("ativo-filtro");
 }
-//fecha menu e anima
+/* //fecha menu e anima
 function targetMenu(event) {
   if (event.target != botaoMenuMobile && body.classList.contains("menu-open")) {
     menuMobile.setAttribute("style", "animation: subidaMenu 300ms both ease;");
@@ -64,7 +64,7 @@ function targetMenu(event) {
       menuMobile.removeAttribute("style", "animation");
     }, 300);
   }
-}
+} */
 
 function abreCatego() {
   body.classList.toggle("ativo");
@@ -78,12 +78,6 @@ function fechaCatego(event) {
     body.classList.toggle("ativo");
   }
 }
-
-/* function fechaFiltro(event) {
-  console.log(event.target);
-  if (event.target != filtro && body.classList.contains("ativo-filtro")) {
-  }
-} */
 
 function filtroInit() {
   if ($(window).width() <= 1000) {
@@ -99,10 +93,10 @@ $(document).ready(function () {
   filtroInit();
 });
 
-document.addEventListener("DOMContentLoaded", checagem);
+/* document.addEventListener("DOMContentLoaded", checagem);
 body.addEventListener("click", targetMenu);
 botaoMenuMobile.addEventListener("click", abreMenu);
-window.addEventListener("resize", resize);
+window.addEventListener("resize", resize); */
 botaoCategorias.addEventListener("click", abreCatego);
 body.addEventListener("click", fechaCatego);
 filtro.addEventListener("click", abreFiltro);

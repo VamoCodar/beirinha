@@ -79,16 +79,23 @@
   }
   .btn-receita {
     margin-top: auto;
-    max-width: 100px;
+    height:40px;
+    max-width: 130px;
     display: inline-block;
     border-radius: 18px;
     background: $laranja;
-    padding: 5px 12px;
+    padding: 0 12px;
     color: white;
     transition: 0.3s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     &:hover {
       transform: scale(1.1);
     }
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
   }
 }
 
@@ -131,7 +138,12 @@
         display: block;
         color: #b7b7b7;
         font-size: 14px;
+        a:hover{
+          color: #b7b7b7;
+  
+       }
       }
+
       .btn-receita {
         margin-top: auto;
         height:40px;

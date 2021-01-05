@@ -1,12 +1,12 @@
 //função que adiciona a classe mobile ou desktop dependendo do tamanho da tela
 let body = document.querySelector("body");
-const botaoMenuMobile = document.querySelector(".hamburguer");
+/* const botaoMenuMobile = document.querySelector(".hamburguer");
 const botaoMenuMobileA = document.querySelector(".hamburguer a");
-const menuMobile = document.querySelector(".menu-mobile");
+const menuMobile = document.querySelector(".menu-mobile"); */
 const botaoCategorias = document.querySelector(".categorias-mobile");
 const aside = document.querySelector(".aside-container");
 
-function checagem() {
+/* function checagem() {
   if (window.innerWidth >= 993) {
     body.classList.add("desktop");
     body.classList.remove("mobile");
@@ -60,7 +60,7 @@ function targetMenu(event) {
     }, 300);
   }
 }
-
+ */
 //carousel
 /*
 $(".relacionados-container").slick({
@@ -129,9 +129,9 @@ function fechaCatego(event) {
   }
 }
 
-body.addEventListener("click", targetMenu);
+/* body.addEventListener("click", targetMenu);
 botaoMenuMobile.addEventListener("click", abreMenu);
-window.addEventListener("resize", resize);
+window.addEventListener("resize", resize); */
 botaoCategorias.addEventListener("click", abreCatego);
 body.addEventListener("click", fechaCatego);
-document.addEventListener("DOMContentLoaded", checagem);
+//document.addEventListener("DOMContentLoaded", checagem);

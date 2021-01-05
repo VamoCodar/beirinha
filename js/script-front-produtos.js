@@ -6,6 +6,31 @@ const menuMobile = document.querySelector(".menu-mobile"); */
 const botaoCategorias = document.querySelector(".categorias-mobile");
 const aside = document.querySelector(".aside-container");
 
+
+var swiper = new Swiper('#swiper-container', {
+  slidesPerView: 'auto',
+  centeredSlides: false,
+  breakpoints: {
+
+      640: {
+          slidesPerView: 1,
+          centeredSlides: true,
+          spaceBetween: 10,
+      },
+
+      800: {
+          slidesPerView: 1,
+          centeredSlides: false,
+          spaceBetween: 20,
+      },
+      1024: {
+          slidesPerView: 'auto',
+          centeredSlides: false,
+          spaceBetween: 30,
+      },
+  }
+});
+
 /* function checagem() {
   if (window.innerWidth >= 993) {
     body.classList.add("desktop");

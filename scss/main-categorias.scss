@@ -457,6 +457,7 @@ a {
 }
 
 .buttons {
+  margin: 0 15px;
   display: flex;
   justify-content: space-around;
   position: relative;
@@ -484,7 +485,7 @@ a {
   }
 }
 .mobile .button-filtro {
-  margin: 10px 0;
+  margin: 10px 15px;
   display: inline-block;
   background: $laranja;
   border-radius: 18px;

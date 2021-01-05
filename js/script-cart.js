@@ -123,6 +123,9 @@ jQuery(document).ready(function($){
         $('#badgeHeader').addClass('ativo')
         $('#badgeHeader').html(cartTotal)
 
+        $('#badgeHeader_mobile').addClass('ativo')
+        $('#badgeHeader_mobile').html(cartTotal)
+
       }
   });
   
@@ -185,7 +188,8 @@ jQuery(document).ready(function($){
 
                 $('#cart-message').html(product_qty + ' ' + produtos)
 
-                document.getElementById('cart-tooltip').style.opacity = '1'                
+                document.getElementById('cart-tooltip').style.opacity = '1'  
+                              
 
             },
 

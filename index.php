@@ -111,7 +111,7 @@ $secao2IconeTexto = pods('opes_home2');
         <div class="bg-azul"></div>
         <div class="container js-scroll">
             <h2>Categorias</h2>
-            <a href="categorias.html" class="todas">Ver todas as categorias</a>
+            <a href="<?php echo get_site_url(); ?>/categoria/promocoes/" class="todas">Ver todas as categorias</a>
             <div class="container-cartao">
                 <ul class="categoria-cartao col-3">
                     <li>
@@ -203,36 +203,36 @@ $secao2IconeTexto = pods('opes_home2');
                 <h3>Receitas</h3>
                 <div class="row texto">
                     <p>Dê uma olhada nas nossas receitas e faça diretamente a sua encomenda</p>
-                    <a class="ml-auto" href="receitas.html">Ver todas as receitas</a>
+                    <a class="ml-auto" href="<?php echo get_site_url(); ?>/receitas/">Ver todas as receitas</a>
                 </div>
 
                 <div class="receitas-container row">
-                    <div class="receita-item col-md-4">
-                        <a class="container-img" href="receita-detalhe.html"><img src="https://beirinha.pt/wpdev2/wp-content/themes/beirinha/img/receita-1.jpg" alt="bolo"></a>
-                        <span>Entrada</span>
-                        <a href="receita-detalhe.html">
-                            <h2>Camembert no forno com compota e nozes pecan caramelizadas, o aperitivo que vai derreter na sua boca</h2>
-                        </a>
-                        <a class="btn-receita" href="receita-detalhe.html">Ver tudo</a>
-                    </div>
-                    <div class="receita-item col-md-4">
-                        <a class="container-img" href="receita-detalhe.html"><img src="https://beirinha.pt/wpdev2/wp-content/themes/beirinha/img/receita-2.jpg" alt="bolo"></a>
-                        <span>Sobremesa</span>
-                        <a href="receita-detalhe.html">
-                            <h2>Tarte Italiana de pêra com amêndoas</h2>
-                        </a>
-                        <a class="btn-receita" href="receita-detalhe.html">Ver tudo</a>
-                    </div>
-                    <div class="receita-item col-md-4">
-                        <a class="container-img" href="receita-detalhe.html"><img src="https://beirinha.pt/wpdev2/wp-content/themes/beirinha/img/receita-1.jpg" alt="bolo"></a>
-                        <span>Entrada</span>
-                        <a href="receita-detalhe.html">
-                            <h2>Camembert no forno com compota e nozes pecan caramelizadas, o aperitivo que vai derreter na sua boca</h2>
-                        </a>
-                        <a class="btn-receita" href="receita-detalhe.html">Ver tudo</a>
-                    </div>
+                    <?php
+                    $recent_posts = wp_get_recent_posts(array(
+                        'numberposts' => 3,
+                        'post_status' => 'publish'
+                    ));
+                    foreach($recent_posts as $post) :
+                    
+                        $categories = get_the_category($post['ID']);
+                        
+                        ?>
+                        <div class="receita-item col-md-4">
+                            <a class="container-img" href="<?php echo get_permalink($post['ID']) ?>">
+                                <?php echo get_the_post_thumbnail($post['ID'], 'celeuma-medium-thumb'); ?>
+                            </a>
+                            <?php
+                                if ( ! empty( $categories ) ) {
+                                    echo '<span><a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a></span>';
+                                }
+                            ?>
+                            <a href="<?php echo get_permalink($post['ID']) ?>">
+                                <h2><?php echo $post['post_title'] ?></h2>
+                            </a>
+                            <a class="btn-receita" href="<?php echo get_site_url(); ?>/receitas/">Ver tudo</a>
+                        </div>
+                    <?php endforeach; wp_reset_query(); ?>
                 </div>
-
             </div>
         </div>
     </section>

@@ -1,0 +1,74 @@
+@keyframes descida {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(-37px);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: translateY(37px);
+  }
+}
+@keyframes descidaMenu {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes subidaMenu {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+.js-scroll {
+  opacity: 0;
+}
+.js-scroll.passou {
+  animation: vemnenem 0.2s both ease;
+}
+
+@keyframes vemnenem {
+  0% {
+    transition: 0.1s ease-in;
+
+    opacity: 0%;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes voltanenem {
+  0% {
+    transition: 0.3s;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translateX(100px);
+  }
+}
+
+@keyframes vemdeladin {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

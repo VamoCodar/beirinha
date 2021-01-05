@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="33px" height="33px" viewbox="0 0 33 33" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+      <feOffset dx="0" dy="0" />
+      <feGaussianBlur stdDeviation="0.5" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24313726 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect0_dropShadow" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect0_dropShadow" result="shape" />
+    </filter>
+  </defs>
+  <g id="Group-12" transform="translate(0.30004883 0.30000305)">
+    <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" id="Oval-Copy-7" fill="#EA882D" fill-rule="evenodd" stroke="none" filter="url(#filter_1)" />
+    <g id="coracao-(1)" transform="translate(12.108154 12.1081085)">
+      <path d="M5.37942 0.00362036C4.82491 0.00362036 4.30083 0.206361 3.87819 0.575638C3.45554 0.20274 2.92808 0 2.37357 0C1.7413 0 1.14621 0.264287 0.696519 0.745795C0.246825 1.2273 0 1.86449 0 2.54512C0 3.22212 0.246825 3.86293 0.696519 4.34082L3.37778 7.21177C3.50964 7.35296 3.68884 7.43261 3.87819 7.43261C4.06753 7.43261 4.24335 7.35296 4.3786 7.21177L7.05648 4.34444C7.50617 3.86293 7.753 3.22575 7.753 2.54512C7.753 1.86449 7.50617 1.2273 7.05648 0.745795C6.61017 0.267907 6.01508 0.00362036 5.37942 0.00362036Z" id="Shape" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+    </g>
+  </g>
+</svg>

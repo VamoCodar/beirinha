@@ -1,0 +1,541 @@
+$branco: #fbfbfb;
+$cinza-claro: #d8d8d8;
+$laranja: #EA882D;
+$preto-claro: #363636; //imports bootstrap
+//comentados os features que n estão sendo usados
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type"; //pegando algumas margins
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid"; //usado colunas e row
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+//@import "bootstrap/nav";
+//@import "bootstrap/navbar";
+@import "bootstrap/card";
+//@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/alert";
+//@import "bootstrap/progress";
+//@import "bootstrap/media";
+//@import "bootstrap/list-group";
+//@import "bootstrap/close";
+//@import "bootstrap/toasts";
+//@import "bootstrap/tooltip";
+//@import "bootstrap/popover";
+@import "bootstrap/carousel";
+//@import "bootstrap/spinners";
+@import "bootstrap/utilities"; //usado para alinhamento de textos e etc
+//@import "bootstrap/print";
+
+//imports do projeto
+@import "reset";
+@import "responsivo";
+@import "menu";
+@import "animacoes";
+@import "footer";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fbfbfb;
+  overflow-x: hidden;
+}
+.container {
+  padding-right: 25px;
+  padding-left: 25px;
+  position: relative;
+  max-width: 1320px;
+}
+//estilos produtos
+
+.space-menu {
+  height: 104px;
+  max-width: 100%;
+}
+a {
+  transition: 0.3s;
+  &:hover {
+    color: black;
+  }
+}
+.categorias {
+  margin-top: 80px;
+  //overflow-y: auto;
+  height: 550px;
+  width: 270px;
+  background: #f6f6f6;
+  padding-left: 30px;
+  border-left: 9px solid $laranja;
+
+  h2 {
+    opacity: 0.1835705;
+    color: #494949;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 0;
+    padding-left: 0px;
+  }
+  //promoções azul
+
+  .promo {
+    padding: 0;
+    h3 {
+      color: $laranja;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  form {
+    border-top: 5px solid #fbfbfb;
+    padding-top: 20px;
+    a.nav-link {
+      display: inline-block;
+      margin: 5px 0;
+      color: #3a3a3a;
+      font-size: 14px;
+      cursor: pointer;
+      &:after {
+        content: "";
+        background-image: url("../img/icons/setinha.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 10px;
+        height: 7px;
+        display: inline-block;
+        margin-left: 5px;
+      }
+    }
+    a {
+      font-size: 12px;
+      display: block;
+      color: #6b6b6b;
+      padding: 3px 0;
+      &:hover {
+        text-decoration: underline $laranja;
+      }
+    }
+  }
+}
+
+.filtros {
+  overflow-y: auto;
+  width: 270px;
+  background: #f6f6f6;
+  padding-left: 30px;
+  margin-top: 20px;
+  border-left: 9px solid $laranja;
+  h2 {
+    opacity: 0.1835705;
+    color: #494949;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 0;
+    padding-left: 0px;
+  }
+  .slider {
+    display: block;
+  }
+  .collapse-price {
+    font-size: 12px;
+    color: #6b6b6b;
+    padding: 3px 0;
+    button {
+      background: $laranja;
+      max-width: 70px;
+      font-size: 14px;
+      margin-left: auto;
+      text-align: center;
+      border-radius: 2px;
+      padding: 5px 0;
+      color: $branco;
+    }
+    button:nth-child(2){
+      margin-left:20px;
+    }
+  }
+  a.nav-link {
+    display: block;
+    margin: 12px 0;
+    color: #3a3a3a;
+    font-size: 14px;
+    cursor: pointer;
+    &:after {
+      content: "";
+      background-image: url("../img/icons/setinha.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 10px;
+      height: 7px;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+  #collapse-ordenar {
+    a {
+      font-size: 14px;
+      display: block;
+      color: #6b6b6b;
+      padding: 3px 0;
+      &:hover {
+        text-decoration: underline $laranja;
+      }
+    }
+  }
+}
+.collapse {
+  transition: 0.2s ease-in-out;
+  background: rgb(245, 245, 245);
+
+  //botoes dentro das secoes
+  a {
+    color: rgb(79, 79, 79);
+    display: block;
+    padding: 5px 0;
+    &:hover {
+      color: $laranja !important;
+      text-decoration: underline;
+    }
+  }
+}
+
+.mobile .aside-container {
+  display: none;
+  z-index: 99;
+}
+
+.mobile.ativo .aside-container {
+  display: block;
+  position: absolute;
+  z-index: 99;
+  top: 40px;
+  margin-top: 30px;
+  animation: vemdeladin 0.3s ease both;
+  .categorias {
+    z-index: 99;
+
+    h2 {
+      display: none;
+    }
+    margin-top: 0;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+    height: 100% !important;
+    a:not(.nav-link) {
+      padding: 15px 0;
+    }
+  }
+}
+//produto principal
+.item-ativo {
+  margin-top: 80px;
+  margin-left: 10%;
+
+  .mapa-produto {
+    span {
+      color: #c2c2c2;
+
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 22px;
+        background: #c2c2c2;
+        vertical-align: middle;
+        margin-left: 15px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      text-decoration: underline;
+      text-transform: uppercase;
+      margin-left: 15px;
+    }
+  }
+}
+
+.flexNowrap {
+  flex-wrap: nowrap;
+}
+
+//produtos
+
+.produtos {
+  margin-top: 80px;
+  h2.tit {
+    color: #3c3c3c;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 33.52px;
+    margin: 40px 0;
+  }
+}
+.produtos-container {
+  min-height: 350px;
+  align-content: center;
+}
+.produtos-card {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 10px 15px;
+  width: 280px;
+  height: 300px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.13);
+  @include d(s) {
+    margin: 10px 0 !important;
+    margin-bottom: 20px;
+  }
+  @include d(s2) {
+    margin: 0px !important;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: #3c3c3c;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23.52px;
+  }
+  span {
+    color: $laranja;
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  img {
+    margin: 0 auto;
+    width: 180px;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .menos,
+  .mais {
+    background-image: url(../img/icons/menos.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    bottom: 70px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3),
+      0px 2px 2px rgba(100, 100, 100, 0.15);
+
+    border-radius: 50%;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .mais {
+    background-image: url(../img/icons/mais.svg);
+    bottom: 120px;
+  }
+  .circulo-verde {
+    bottom: 15px;
+    left: 32px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(100, 100, 100, 0.15);
+    &:hover {
+      transform: scale(1.1);
+    }
+    a {
+      position: absolute;
+      left: 45px;
+      font-size: 10px;
+      color: $laranja;
+      vertical-align: middle;
+      bottom: 10px;
+      font-weight: 700;
+    }
+    &:after {
+      content: "";
+      display: flex;
+      background-image: url(../img/icons/sacola.svg);
+      background-repeat: no-repeat;
+      width: 22px;
+      height: 20px;
+      background-size: contain;
+      margin-left: 12px;
+      margin-top: 9px;
+      align-items: center;
+    }
+  }
+  .badge {
+    background: $preto-claro;
+    top: -6px;
+    right: -6px;
+  }
+  .wishlist {
+    display: inline-block;
+    background: url(../img/icons/coracao-fundo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    bottom: 15px;
+    right: 20px;
+    transition: 0.3s;
+    box-shadow: 0px 2px 2px rgba(100, 100, 100, 0.15);
+
+    border-radius: 50%;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.mapa-produto {
+  margin-bottom: 20px;
+  margin-left: 6%;
+
+  span {
+    color: #c2c2c2;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 22px;
+      background: #c2c2c2;
+      vertical-align: middle;
+      margin-left: 15px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-left: 15px;
+  }
+}
+.mobile .produtos {
+  margin-top: 20px;
+
+  .produtos-card {
+    margin-right: 20px;
+    position: relative;
+    padding: 10px 15px;
+    width: 260px;
+    height: 300px;
+  }
+}
+.categorias-mobile {
+  display: none;
+}
+
+.button-filtro {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.mobile .categorias-mobile {
+  margin: 10px 0;
+  display: inline-block;
+  background: $laranja;
+  border-radius: 18px;
+  max-width: 120px;
+  padding: 10px 5px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  @include d(ss) {
+    font-size: 12px;
+    padding: 10px 2px;
+    max-width: 90px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.mobile .button-filtro {
+  margin: 10px 0;
+  display: inline-block;
+  background: $laranja;
+  border-radius: 18px;
+  max-width: 120px;
+  padding: 10px 5px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+  @include d(ss) {
+    font-size: 12px;
+    padding: 10px 2px;
+    max-width: 90px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.mobile .filtros {
+  display: none;
+}
+.filtro-mobile {
+  display: none;
+}
+.ativo-filtro .filtro-mobile {
+  display: block !important;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  .filtros {
+    display: block !important;
+    position: absolute;
+    z-index: 99;
+    animation: vemdeladin 0.3s ease both;
+  }
+}
+.desktop .ativo-filtro .filtro-mobile {
+  display: none;
+}
+
+//pagination
+.pagination {
+  margin-top: 40px;
+}
+.page-item {
+  color: $laranja;
+}
+
+.mobile .navbar-desktop {
+  z-index: 1990;
+}

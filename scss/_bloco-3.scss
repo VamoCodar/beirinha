@@ -1,0 +1,175 @@
+//categorias
+.bloco-3 {
+  margin-top: 100px;
+  position: relative;
+  .bg-azul {
+    background: linear-gradient(-58deg, #EA882D, #DA771B);
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: -15%;
+  }
+  h2 {
+    color: $laranja;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 41px;
+    margin-bottom: 40px;
+  }
+  .container-cartao {
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow: hidden;
+    justify-content: center;
+    padding: 30px 0;
+  }
+  .todas {
+    display: none;
+  }
+
+  //estilos gerais
+  .categoria-cartao {
+    min-width: 242px;
+    max-width: 317px;
+    height: 310px;
+    padding: 20px;
+    margin-left: 20px;
+    padding-top: 50px;
+    background-image: url(../img/mercearia.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: translateY(-15px);
+    }
+    li {
+      margin-left: 130px;
+      //titulo
+      a {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: $laranja;
+        margin-bottom: 10px;
+      }
+      .subcategoria a {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        color: #6a6a6a;
+        display: inline-block;
+      }
+      .button {
+        font-size: 10px;
+        padding: 8px 15px;
+        background: $laranja;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $branco;
+        cursor: pointer;
+        border-radius: 18px;
+        display: inline-block;
+        margin-top: 10px;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        @include d(ss) {
+          font-size: 10px;
+          padding: 6px 12px;
+        }
+      }
+    }
+  }
+  .cartao-2 {
+    background-image: url(../img/laticinios.png);
+  }
+  .cartao-3 {
+    background-image: url(../img/bebidas.png);
+  }
+  .cartao-4 {
+    background-image: url(../img/congelados.png);
+  }
+}
+.desktop .bloco-3 {
+  .slick-track {
+    max-width: 1280px !important;
+  }
+}
+
+.mobile .bloco-3 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  .bg-azul {
+    display: none;
+  }
+  .categoria-cartao {
+    max-width: 242px;
+    li {
+      margin-left: 100px;
+    }
+  }
+  h2 {
+    margin-left: -15px;
+    position: relative;
+    margin-bottom: 0px;
+  }
+  .todas {
+    display: block;
+    color: #8c8c8c;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 10px 0;
+    position: absolute;
+    right: 20px;
+    top: 6px;
+  }
+  .container-cartao {
+    margin-top: 30px;
+  }
+  .prox {
+    background-image: url(../img/icons/prox.svg);
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    display: block;
+    left: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .ant {
+    background-image: url(../img/icons/ant.svg);
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    display: block;
+    left: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 1156px) {
+  .bloco-3 {
+    .categoria-cartao {
+      max-width: 242px;
+      li {
+        margin-left: 100px;
+      }
+    }
+  }
+}
+#swiper-container {
+  width: 100%;
+ // height: 100%;
+  overflow: hidden;
+}
+
+

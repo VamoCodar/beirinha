@@ -1,0 +1,36 @@
+ .site-content {
+    width: 100%
+} 
+
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+    width: 100%
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    background-color: #EA882D !important
+}
+
+.woocommerce div.product div.images.woocommerce-product-gallery {
+    opacity: 100 !important
+}
+
+a.added_to_cart {
+    padding-top: .5em;
+    display: none !important
+}
+
+#cart-message {
+    background: #000;
+    padding: 10px;
+    top: 23px;
+    position: relative;
+    width: 151px;
+    text-align: center;
+    color: white
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="41px" height="41px" viewbox="0 0 41 41" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB" id="filter_1">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+      <feOffset dx="0" dy="0" />
+      <feGaussianBlur stdDeviation="0.5" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24313726 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect0_dropShadow" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect0_dropShadow" result="shape" />
+    </filter>
+  </defs>
+  <g id="Group-11" transform="translate(0.39001465 0.39001465)">
+    <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" id="Oval" fill="#EA882D" fill-rule="evenodd" stroke="none" filter="url(#filter_1)" />
+    <g id="saco-(2)" transform="translate(12.972961 10.810791)">
+      <path d="M14.2981 15.319L13.2683 3.85627C13.2498 3.62943 13.0572 3.45747 12.8238 3.45747L10.6532 3.45747C10.6495 1.55129 9.07892 0 7.14905 0C5.21917 0 3.64861 1.55129 3.6449 3.45747L1.47426 3.45747C1.2446 3.45747 1.05198 3.62943 1.02976 3.85627L0 15.319C0 15.3336 0 15.3446 0 15.3592C0 16.6361 1.18904 17.6752 2.64848 17.6752L11.6496 17.6752C13.1091 17.6752 14.2981 16.6361 14.2981 15.3592C14.2981 15.3446 14.2981 15.3336 14.2981 15.319ZM7.14905 0.878088C8.58997 0.878088 9.76049 2.03424 9.76419 3.45747L4.5339 3.45747C4.53761 2.03424 5.70813 0.878088 7.14905 0.878088ZM11.6496 16.7934L2.64848 16.7934C1.6854 16.7934 0.900113 16.1605 0.889001 15.3739L1.88172 4.33556L3.6449 4.33556L3.6449 5.87587C3.6449 6.11735 3.84493 6.31492 4.0894 6.31492C4.33388 6.31492 4.5339 6.11735 4.5339 5.87587L4.5339 4.33556L9.76419 4.33556L9.76419 5.87587C9.76419 6.11735 9.96422 6.31492 10.2087 6.31492C10.4532 6.31492 10.6532 6.11735 10.6532 5.87587L10.6532 4.33556L12.4164 4.33556L13.4091 15.3775C13.398 16.1605 12.6127 16.7934 11.6496 16.7934Z" transform="translate(0.020372933 -2.842171E-14)" id="Shape" fill="#FFFFFF" stroke="none" />
+    </g>
+  </g>
+</svg>

@@ -223,7 +223,7 @@ $secao2IconeTexto = pods('opes_home2');
                             </a>
                             <?php
                                 if ( ! empty( $categories ) ) {
-                                    echo '<span><a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a></span>';
+                                    echo '<span><a class="subtitle" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a></span>';
                                 }
                             ?>
                             <a href="<?php echo get_permalink($post['ID']) ?>">

@@ -274,4 +274,4 @@ let dolyItem = document.querySelector(".slide-section");
 
 
 window.addEventListener("scroll", animaScroll);
-window.addEventListener("resize", resize);
+//window.addEventListener("resize", resize);

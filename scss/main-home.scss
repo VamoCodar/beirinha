@@ -107,3 +107,9 @@ body {
   width: 200px;
   text-align: center;
 }
+.product-name a:hover{
+  color: $laranja;
+}
+#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
+  width: 150px !important;
+}

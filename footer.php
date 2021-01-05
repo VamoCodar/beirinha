@@ -30,7 +30,7 @@
 <!-- swiper CAROUSEL -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<?php if ( !is_product() ){ ?>
+<?php if ( is_home() || is_front_page() ){ ?>
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-front.js"></script>
 <?php }	?>
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-cart.js"></script>
@@ -44,7 +44,7 @@
 <?php if ( is_archive() ){ ?>
 <!-- SLIDER -->
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jsr.js"></script>
-
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-front-categorias.js"></script>
 <!-- script vannila-->
 
 <?php } ?>

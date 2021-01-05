@@ -130,7 +130,7 @@ $link = substr($link, 0, strpos($link, "?"));
                 <div class="mapa-produto row align-items-center"> <?php //do_action( 'woocommerce_before_main_content' ); ?>
                 </div>
                 
-                <div class="row produtos-container justify-content-center">
+                <div class="row mx-0 produtos-container justify-content-center">
 				
 				<?php
 					if ( woocommerce_product_loop() ) {

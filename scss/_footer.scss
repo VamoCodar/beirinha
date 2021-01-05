@@ -1,24 +1,115 @@
 footer {
   background: #464646;
-  padding: 20px 0;
+  padding-top: 60px;
   margin-top: 100px;
+
+  .links-footer {
+    margin: 0 10px;
+  }
+
   .row {
     align-items: center;
   }
-  p {
-    color: white;
-    font-size: 10px;
-    margin-left: auto;
+
+  ul {
+    align-self: flex-start;
+
+    a {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      color: #FFFFFF;
+      vertical-align: middle;
+      align-items: center;
+      margin-bottom: 16px;
+      display: flex;
+
+      &:hover {
+        color: $laranja;
+      }
+    }
+
+    svg {
+      margin-right: 10px;
+
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 21px;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+
+    }
   }
+
+  .fundo-branco {
+    background: white;
+    margin-top: 40px;
+  }
+
+  .metodo-pagamento {
+    padding: 20px 0;
+    justify-content: space-between;
+  }
+
 }
-.mobile footer {
-  .row {
-    flex-direction: column;
-    justify-content: center;
+
+footer {
+
+  .metodo-pagamento {
+    img {
+      margin-right: 15px;
+
+      @include d(s) {
+
+        max-width: 100px;
+
+      }
+    }
+
   }
-  p {
-    margin-top: 20px;
-    margin-left: initial;
+
+  .pag {
+    padding: 20px 0;
+
+    p {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+
+
+      color: #3D3D3D;
+    }
+
+  }
+
+  .pag-2 {
+    @include d(s) {
+      padding: 20px 0;
+      border-top: 1px solid #D8D8D8;
+    }
+  }
+
+  .copy {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
     text-align: center;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+
+}
+
+.sobre,
+.privacidade {
+  a {
+    font-weight: bold;
+  }
+
+  @include d(s) {
+    margin-top: 30px;
   }
 }

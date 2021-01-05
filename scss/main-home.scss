@@ -86,9 +86,24 @@ body {
 #order_review_heading{
   margin-top: 30px;
 }
-.woocommerce-checkout .page{
+.woocommerce-checkout .page,
+.woocommerce-page .page{
   padding: 2%;
 }
-.woocommerce-checkout .page h1{
+.woocommerce-checkout .page h1,
+.woocommerce-page .page h1{
   margin-bottom: 20px;
+}
+.coupon .input-text {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+.coupon button{
+    margin-bottom: 20px;
+    width: 150px;
+    float: left;
+}
+.actions .button{
+  width: 200px;
+  text-align: center;
 }

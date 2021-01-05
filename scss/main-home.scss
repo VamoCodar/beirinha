@@ -107,9 +107,42 @@ body {
   width: 200px;
   text-align: center;
 }
-.product-name a:hover{
+.product-name a:hover,
+.woocommerce-page .page a:hover{
   color: $laranja;
+}
+.woocommerce-info {
+  border-top-color: $laranja !important;
+}
+.woocommerce-info::before {
+  color: $laranja !important;
 }
 #add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
   width: 150px !important;
+}
+.woocommerce-page .col-1 {
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+}
+
+.woocommerce-page .col-2 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col2-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.woocommerce-Addresses{
+  margin-top: 30px;
+}
+
+.woocommerce-account .addresses .title .edit {
+  float: right;
+  background:$laranja !important;
+  padding: 7px;
+  color: white;
 }

@@ -104,8 +104,7 @@ $search = new WP_Query( $search_query );
 			<input type="hidden" value="<?php echo the_ID();?>" name="variation_id">
 			<div class="circulo-verde row add-cart"><a class="add-cart">Comprar</a><i class="badge"></i></div>
 			<div class="row">
-
-				<span class="wishlist"></span>
+            <?php echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?>
 			</div>
 		</div>
 

@@ -691,3 +691,48 @@ a {
 .flex-viewport{
   max-width: 320px !important;
 }
+
+.yith-wcwl-add-to-wishlist span,
+.yith-wcwl-add-to-wishlist i{
+  display: none !important;
+}
+.yith-wcwl-add-to-wishlist .add_to_wishlist{
+    display: inline-block !important;
+    background: url(../img/icons/coracao-fundo.svg) !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 40px !important;
+    height: 40px !important;
+    position: absolute !important;
+    cursor: pointer !important;
+    bottom: 15px !important;
+    right: 20px !important;
+    transition: 0.3s !important;
+    box-shadow: 0px 2px 2px rgba(100, 100, 100, 0.15) !important;
+
+    border-radius: 50% !important;
+    &:hover {
+      transform: scale(1.1) !important;
+    }
+  }
+  .yith-wcwl-wishlistaddedbrowse,
+  .yith-wcwl-wishlistexistsbrowse{
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    width: 100px !important;
+    height: 40px !important;
+    position: absolute !important;
+    bottom: 5px !important;
+    right: 20px !important;
+    text-align: right !important;
+    transition: 0.3s !important;
+    a {
+      color: $laranja !important;
+    }
+    &:hover {
+      color: $laranja !important;
+    }
+  }

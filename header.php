@@ -36,26 +36,21 @@
 	<!-- CSS Receitas -->
 		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-receita-detalhe.css">
 	<?php }?>
-
-
 	<?php if( is_page_template( 'page-sobre-nos.php' ) ){ ?>
 		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-sobre.css">
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
 		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 	<?php } ?>	
+	<?php if( is_page_template(array('default')) ){
 
-	<?php if( is_page( ) ){ ?>
+				if ( !is_product() ){
+		
+		?>
 		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-sobre.css">
-	<?php } ?>	
-
-	<?php if( is_page_template( 'page-receitas.php' ) ){ ?>
+	<?php }} ?>	
+	<?php if ( is_page() && !is_page_template() ) { ?>
 		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-receitas.css">
-	<?php } ?>
-
-
-
-	
-
+	<?php } ?>	
 	<title>
 		<?php
 			if(!strrpos($_SERVER['REQUEST_URI'],'home')) 

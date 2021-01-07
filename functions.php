@@ -32,6 +32,7 @@ function celeuma_setup() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
+	add_theme_support('align-wide');
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -170,12 +171,22 @@ function wps_breadcrumb_delimiter( $defaults ) {
 
 function getProdutosCarrossel($categoria = '', $quantidade, $idsRelacionados = [], $div){
 
-		$args = array(
-			'post_type'      => 'product',
-			'posts_per_page' => $quantidade,
-			'product_cat'    => $categoria,
-			'post__in'       => $idsRelacionados
-		);
+
+		if($categoria == 'Rand'){
+			$args = array(
+				'post_type' => array('product'),
+				'orderby' => 'rand', 
+				'posts_per_page' => $quantidade,
+				'post_status' => 'publish'
+			);
+		}else{
+			$args = array(
+				'post_type'      => 'product',
+				'posts_per_page' => $quantidade,
+				'product_cat'    => $categoria,
+				'post__in'       => $idsRelacionados
+			);
+		}
 
 		$loop = new WP_Query( $args );
 		$i = 0;

@@ -1,6 +1,6 @@
 $branco: #fbfbfb;
 $cinza-claro: #d8d8d8;
-$laranja: #00a3da;
+$laranja: #EA882D;
 $preto-claro: #363636; //imports bootstrap
 //comentados os features que n estão sendo usados
 @import "bootstrap/functions";
@@ -123,7 +123,7 @@ a {
     display: inline-block;
     border-radius: 18px;
     background: $laranja;
-    padding: 5px 12px;
+    padding: 12px 12px;
     color: white;
     transition: 0.3s;
     &:hover {
@@ -203,7 +203,8 @@ a {
   }
   img {
     margin: 0 auto;
-    width: 180px;
+    width: 165px;
+    height: 165px;
     transition: 0.3s;
     &:hover {
       transform: scale(1.1);

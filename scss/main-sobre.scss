@@ -1,6 +1,6 @@
 $branco: #fbfbfb;
 $cinza-claro: #d8d8d8;
-$laranja: #00a3da;
+$laranja: #EA882D;
 $preto-claro: #363636; //imports bootstrap
 //comentados os features que n estão sendo usados
 @import "bootstrap/functions";
@@ -88,7 +88,7 @@ a {
 }
 .text-sobre {
   h2 {
-    color: #00a3da;
+    color: $laranja;
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 700;
@@ -109,5 +109,14 @@ a {
     p {
       font-size: 14px;
     }
+  }
+}
+
+h1, h2, h3, h4, h5 ,h6{
+  margin: 35px 0;
+}
+.mobile{
+  h1, h2, h3, h4, h5 ,h6{
+    margin: 20px 0;
   }
 }

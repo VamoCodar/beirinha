@@ -1,63 +1,54 @@
-<?php get_header(); ?>
- 
-        <div id="container">
-            <div id="content">
- 
-                <?php the_post(); ?>          
+<?php
 
-				<h1 class="page-title"><?php _e( 'Category Archives:', 'hbd-theme' ) ?> <span><?php single_cat_title() ?></span></span></h1>
-				<?php $categorydesc = category_description(); if ( !empty($categorydesc) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
+get_header(); ?>
 
-				<?php rewind_posts(); ?>
+<!-- receitas -->
+<div class="receitas col-lg-9">
+    <div class="container mt-5">
+        <h3>Receitas</h3>
 
-				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-				                <div id="nav-above" class="navigation">
-				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
-				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
-				                </div><!-- #nav-above -->
-				<?php } ?>            
+        <div class="receitas-container row">
+		<?php
 
-				<?php while ( have_posts() ) : the_post(); ?>
+		global $post;
 
-				                <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				                    <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( __('Permalink to %s', 'hbd-theme'), the_title_attribute('echo=0') ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+            
+			while ( have_posts() ) : the_post();
+			
+			setup_postdata( $post );
 
-				                    <div class="entry-meta">
-				                        <span class="meta-prep meta-prep-author"><?php _e('By ', 'hbd-theme'); ?></span>
-				                        <span class="author vcard"><a class="url fn n" href="<?php echo get_author_link( false, $authordata->ID, $authordata->user_nicename ); ?>" title="<?php printf( __( 'View all posts by %s', 'hbd-theme' ), $authordata->display_name ); ?>"><?php the_author(); ?></a></span>
-				                        <span class="meta-sep"> | </span>
-				                        <span class="meta-prep meta-prep-entry-date"><?php _e('Published ', 'hbd-theme'); ?></span>
-				                        <span class="entry-date"><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr></span>
-				                        <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t" ) ?>
-				                    </div><!-- .entry-meta -->
+			$categories = get_the_category($post->ID);
+        ?>
 
-				                    <div class="entry-summary">
-				<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&raquo;</span>', 'hbd-theme' )  ); ?>
-				                    </div><!-- .entry-summary -->
+            <div class="receita-item col-md-6 mt-5">
+                <a class="container-img" href="<?php echo get_permalink($post->ID) ?>">
+                    <?php echo get_the_post_thumbnail($post->ID, 'celeuma-medium-thumb'); ?>
+                </a>
+                <?php
+                    if ( ! empty( $categories ) ) {
+                        echo '<span><a class="subtitle" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a></span>';
+                    }
+                ?>
+               <a href="<?php echo get_permalink($post->ID) ?>">
+                    <h2><?php echo the_title(); ?></h2>
+                </a>
+                <a class="btn-receita" href="<?php echo get_site_url(); ?>/receitas/">Ver tudo</a>
+            </div>
+            <?php endwhile; ?>
+            
+        </div>
 
-				                    <div class="entry-utility">
-				                        <?php if ( $cats_meow = cats_meow(', ') ) : // Returns categories other than the one queried ?>
-										                        <span class="cat-links"><?php printf( __( 'Also posted in %s', 'hbd-theme' ), $cats_meow ) ?></span>
-										                        <span class="meta-sep"> | </span>
-										<?php endif ?>
-				                        <span class="meta-sep"> | </span>
-				                        <?php the_tags( '<span class="tag-links"><span class="entry-utility-prep entry-utility-prep-tag-links">' . __('Tagged ', 'hbd-theme' ) . '</span>', ", ", "</span>\n\t\t\t\t\t\t<span class=\"meta-sep\">|</span>\n" ) ?>
-				                        <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'hbd-theme' ), __( '1 Comment', 'hbd-theme' ), __( '% Comments', 'hbd-theme' ) ) ?></span>
-				                        <?php edit_post_link( __( 'Edit', 'hbd-theme' ), "<span class=\"meta-sep\">|</span>\n\t\t\t\t\t\t<span class=\"edit-link\">", "</span>\n\t\t\t\t\t\n" ) ?>
-				                    </div><!-- #entry-utility -->
-				                </div><!-- #post-<?php the_ID(); ?> -->
+    </div>
+</div>
 
-				<?php endwhile; ?>            
+<!-- produtos relacionados -->
+<div class="produtos-container col-lg-3">
+    <h1>Produtos relacionados</h1>
+    <div class="row relacionados-container">
 
-				<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
-				                <div id="nav-below" class="navigation">
-				                    <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'hbd-theme' )) ?></div>
-				                    <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'hbd-theme' )) ?></div>
-				                </div><!-- #nav-below -->
-				<?php } ?>                 
- 
-            </div><!-- #content -->
-        </div><!-- #container -->
- 
-<?php get_sidebar(); ?>
+	<?php echo getProdutosCarrossel('Rand', 3, '', 'relacionados-card'); ?>
+       
+    </div>
+</div>
+
 <?php get_footer(); ?>

@@ -100,6 +100,8 @@ endif;
 
                 if (!is_archive()) {
 
+                    if (!is_search()) {
+
             ?>
 
                     <div class=" navbar-collapse" id="navbarContent">
@@ -165,6 +167,7 @@ endif;
                         </ul>
                     </div>
             <?php
+                    }
                 }
             }
             ?>
@@ -189,9 +192,9 @@ endif;
         </div>
     </div>
     <ul class="menu-mobile">
-        <li><a href="sobre.html">Sobre nós</a></li>
-        <li><a href="receitas.html">Receitas</a></li>
-        <li><a href="produtos.html">Promoções</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/sobre-nos/">Sobre nós</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/receitas/">Receitas</a></li>
+        <li><a href="<?php echo get_site_url(); ?>/categoria/promocoes/">Promoções</a></li>
 
     </ul>
 

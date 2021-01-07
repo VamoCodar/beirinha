@@ -30,7 +30,7 @@ get_header(  ); ?>
                     <h2>CATEGORIAS</h2>
                     <form class="accordion" id="accordion-categorias">
                         
-                    <a class="promo" href="#"> <h3>Promoções</h3> </a>
+                    <a class="promo" href="<?php echo get_site_url(); ?>/categoria/promocoes/"> <h3>Promoções</h3> </a>
 
                      <?php
 

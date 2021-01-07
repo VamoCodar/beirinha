@@ -49,27 +49,27 @@
                 </a>
             </ul>
             <ul class="sobre col-md-4">
-                <a href="">
+                <a href="<?php echo get_site_url(); ?>/sobre-nos/">
                     <li>Sobre nós</li>
                 </a>
-                <a href="">
+                <a href="<?php echo get_site_url(); ?>/receitas/">
                     <li>Receitas</li>
                 </a>
-                <a href="">
+                <a href="<?php echo get_site_url(); ?>/categoria/promocoes/">
                     <li>Promoções</li>
                 </a>
-                <a href="">
+                <a href="<?php echo get_site_url(); ?>/minha-conta/orders/">
                     <li>Encomendas</li>
                 </a>
-                <a href="">
+                <a href="<?php echo get_site_url(); ?>/minha-conta/">
                     <li>A minha conta</li>
                 </a>
             </ul>
             <ul class="privacidade col-md-4">
-                <a href="">
+            <a href="<?php echo get_site_url(); ?>/politica-privacidade/">
                     <li>Política de Privacidade</li>
                 </a>
-                <a href="">
+                <a href="<?php echo get_site_url(); ?>/entregas-e-devolucoes/">
                     <li>Entregas e Devoluções</li>
                 </a>
             </ul>
@@ -88,7 +88,7 @@
         </div>
         <div class="pag-2 row mx-0">
         <img src="<?php bloginfo( 'template_url' ); ?>/img/encrypt.png">
-        <img src="<?php bloginfo( 'template_url' ); ?>/img/livro.png">
+        <a href="https://www.livroreclamacoes.pt/inicio" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/livro.png"></a>
 
         </div>
 
@@ -126,7 +126,7 @@
 <?php	} ?>
 
 
-<?php if ( is_archive() ){ ?>
+<?php if ( is_archive() || is_search() ){ ?>
 <!-- SLIDER -->
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/jsr.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-front-categorias.js"></script>
@@ -134,16 +134,17 @@
 
 <?php } ?>
 
+<?php if( is_page_template( 'page-receitas.php' ) ){ ?>
+    <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-front-receitas.js"></script>
+<?php } ?>
+    
+
 <?php wp_footer(); ?>
-
-
 
 </body>
 
 
-<script>
-//init swiper
-
+<script type="text/javascript">
 
 const botaoMenuMobile = document.querySelector(".hamburguer");
 const botaoMenuMobileA = document.querySelector(".hamburguer a");

@@ -19,6 +19,8 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+global $query_string;
+
 ?>
 
 <?php
@@ -102,12 +104,13 @@ $link = substr($link, 0, strpos($link, "?"));
                                 <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-price" aria-controls="collapse">
                                     Preço
                                 </a>
-                                <div id="collapse-price" class="collapse collapse-item px-3 collapse-price" data-parent="#collapse-price">
-                                    <input id="jsr-1-1" name="range1" type="range" min="1" max="999" step="1" value="25" form="minimo">
-                                    <input id="jsr-1-2" name="range2" type="range" min="20" max="1000" step="1" value="50">
-                                    <button>Aplicar</button>
-                                </div>
-
+                                <form action="<?php echo $query_string; ?>&" type="GET">
+                                    <div id="collapse-price" class="collapse collapse-item px-3 collapse-price" data-parent="#collapse-price">
+                                        <input id="jsr-1-1" name="min_price" type="range" min="1" max="999" step="1" value="25">
+                                        <input id="jsr-1-2" name="max_price" type="range" min="20" max="1000" step="1" value="50">
+                                        <button type="submit">Aplicar</button>
+                                    </div>
+                                </form>
                                 <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-ordenar" aria-controls="collapse">
                                     Ordenar
                                 </a>
@@ -245,9 +248,9 @@ get_footer( );
     //SLIDER
     new JSR(["#jsr-1-1", "#jsr-1-2"], {
         sliders: 2,
-        values: [25, 500],
+        values: [1, 50],
         min: 1.0,
-        max: 1000.0,
+        max: 200.0,
         grid: false,
         labels: {
             formatter: (value) => {

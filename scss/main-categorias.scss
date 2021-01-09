@@ -310,6 +310,7 @@ a {
   min-height: 350px;
   align-content: center;
   max-width: 100%;
+  overflow: hidden;
 }
 .produtos-card {
   margin-right: 20px;
@@ -462,6 +463,8 @@ a {
   }
 }
 .mobile .produtos {
+  margin: 0 auto;
+  max-width: 90%;
   margin-top: 20px;
 
   .produtos-card {

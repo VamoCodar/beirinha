@@ -52,20 +52,24 @@ body {
   background: #fbfbfb;
   overflow-x: hidden;
 }
+
 .container {
   padding-right: 25px;
   padding-left: 25px;
   position: relative;
   max-width: 1320px;
 }
+
 //estilos produtos
 
 a {
   transition: 0.3s;
+
   &:hover {
     color: black;
   }
 }
+
 .categorias {
   margin-top: 20px;
   overflow-y: hidden;
@@ -74,9 +78,10 @@ a {
   background: #f6f6f6;
   padding-left: 30px;
   border-left: 9px solid $laranja;
+
   //scroll
   ::-webkit-scrollbar-track {
-    background:rgb(230, 230, 230);
+    background: rgb(230, 230, 230);
     border: 2px solid transparent;
     background-clip: content-box;
   }
@@ -88,8 +93,9 @@ a {
 
   ::-webkit-scrollbar-thumb {
     background-color: #EA882D;
-    border-radius:6px;
+    border-radius: 6px;
   }
+
   h2 {
     opacity: 0.1835705;
     color: #494949;
@@ -98,9 +104,11 @@ a {
     padding: 15px 0;
     padding-left: 0px;
   }
+
   //promoções azul
   .promo {
     padding: 0;
+
     h3 {
       color: $laranja;
       font-weight: 500;
@@ -111,12 +119,14 @@ a {
   form {
     border-top: 5px solid #fbfbfb;
     padding-top: 20px;
+
     a.nav-link {
       display: inline-block;
       margin: 5px 0;
       color: #3a3a3a;
       font-size: 14px;
       cursor: pointer;
+
       &:after {
         content: "";
         background-image: url("../img/icons/setinha.svg");
@@ -128,12 +138,14 @@ a {
         margin-left: 5px;
       }
     }
+
     a {
       font-size: 12px;
       display: block;
       color: #6b6b6b;
       padding: 3px 0;
-      margin-left:15px;
+      margin-left: 15px;
+
       &:hover {
         text-decoration: underline $laranja;
       }
@@ -149,6 +161,7 @@ a {
   padding-left: 30px;
   margin-top: 20px;
   border-left: 9px solid $laranja;
+
   h2 {
     opacity: 0.1835705;
     color: #494949;
@@ -157,9 +170,11 @@ a {
     padding: 15px 0;
     padding-left: 0px;
   }
+
   .slider {
     display: block;
   }
+
   .collapse-price {
     font-size: 12px;
     color: #6b6b6b;
@@ -176,12 +191,14 @@ a {
       color: $branco;
     }
   }
+
   a.nav-link {
     display: block;
     margin: 12px 0;
     color: #3a3a3a;
     font-size: 14px;
     cursor: pointer;
+
     &:after {
       content: "";
       background-image: url("../img/icons/setinha.svg");
@@ -193,12 +210,14 @@ a {
       margin-left: 5px;
     }
   }
+
   #collapse-ordenar {
     a {
       font-size: 14px;
       display: block;
       color: #6b6b6b;
       padding: 3px 0;
+
       &:hover {
         text-decoration: underline $laranja;
       }
@@ -209,6 +228,7 @@ a {
 .mobile .aside-container {
   display: none;
 }
+
 .mobile.ativo .aside-container {
   display: block;
   position: absolute;
@@ -222,19 +242,24 @@ a {
     h2 {
       display: none;
     }
+
     margin-top: 0;
     padding-bottom: 20px;
     overflow-y: hidden;
     height: 100% !important;
+
     a:not(.nav-link) {
       padding: 15px 0;
     }
   }
 }
+
 //produto principal
 .item-ativo {
+  // overflow: hidden;
   margin-top: 20px;
-  margin-left: 10%;
+  margin-left: 30px;
+
   .mapa-produto {
     span {
       color: #c2c2c2;
@@ -248,10 +273,12 @@ a {
         vertical-align: middle;
         margin-left: 15px;
       }
+
       &:hover {
         text-decoration: underline;
       }
     }
+
     p {
       text-decoration: underline;
       text-transform: uppercase;
@@ -268,15 +295,18 @@ a {
 .flexNowrap {
   flex-wrap: nowrap;
 }
+
 .detalhes {
   display: flex;
   flex-direction: column;
+
   .referencia {
     color: #bcbcbc;
     font-size: 12px;
     font-weight: 500;
     line-height: 35.280003px;
   }
+
   .nome-item {
     color: #3c3c3c;
     font-size: 30px;
@@ -288,12 +318,14 @@ a {
       text-decoration: underline;
     }
   }
+
   .disponivel {
     color: #545454;
     font-size: 12px;
     font-weight: 500;
     line-height: 10px;
     margin-top: 20px;
+
     &:before {
       content: "";
       background-image: url(../img/icons/disponivel.svg);
@@ -305,12 +337,14 @@ a {
       margin-right: 5px;
     }
   }
+
   .indisponivel {
-    color:red;
+    color: red;
     font-size: 12px;
     font-weight: 500;
     line-height: 10px;
     margin-top: 20px;
+
     &:before {
       content: "";
       //background-image: url(../img/icons/disponivel.svg);
@@ -322,6 +356,7 @@ a {
       margin-right: 5px;
     }
   }
+
   .valor {
     color: $laranja;
     font-size: 30px;
@@ -329,6 +364,7 @@ a {
     line-height: 35.280003px;
     margin: 30px 0;
   }
+
   .favorito {
     color: #bcbcbc;
     font-size: 14px;
@@ -345,6 +381,7 @@ a {
         transform: scale(1.1);
       }
     }
+
     span {
       vertical-align: middle;
       display: inline-block;
@@ -383,6 +420,7 @@ a {
       transform: scale(1.1);
     }
   }
+
   .single-mais,
   .mais {
     vertical-align: middle;
@@ -402,6 +440,7 @@ a {
       transform: scale(1.1);
     }
   }
+
   .linha {
     padding: 10px 0;
     border-top: solid 1px #ededed;
@@ -410,6 +449,7 @@ a {
     align-items: center;
     margin-left: 0;
   }
+
   .numero-items {
     color: #bcbcbc;
     font-size: 14px;
@@ -417,6 +457,7 @@ a {
     line-height: 16px;
     display: inline-block;
   }
+
   .sacola {
     margin-left: 15px;
     vertical-align: middle;
@@ -434,6 +475,7 @@ a {
     &:hover {
       transform: scale(1.1);
     }
+
     p {
       vertical-align: middle;
       cursor: pointer;
@@ -459,55 +501,73 @@ a {
 }
 
 .mobile .item-ativo {
+  margin: 0 auto;
   margin-top: 20px;
-  padding-left: 5%;
+  max-width: 90%;
+  padding-left: 30px;
   justify-content: center;
+
   @include d(s) {
     padding-left: 0;
   }
+
   .detalhes {
     max-width: 250px;
+
     .nome-item h3 {
       font-size: 22px;
     }
+
     .disponivel {
       margin-top: 10px;
     }
+
     .valor {
       margin: 15px 0;
     }
   }
+
   .linha {
     max-width: 100%;
   }
+
   .produto-central {
     margin-top: 20px;
+    overflow: hidden;
+
   }
+
   .mapa-produto {
-    max-width:250px;
+    max-width: 250px;
     margin-left: 10%;
+
     @include d(s) {
       margin-left: 1%;
     }
+
     .imagem-produto {
       max-width: 250px;
     }
   }
 }
-.imagem-produto ol{
+
+.imagem-produto ol {
   display: flex;
 }
-.imagem-produto li{
+
+.imagem-produto li {
   width: 75px;
 }
-.woocommerce-product-gallery__wrapper{
-  //width: 300px !important;
-}
+
+/* .woocommerce-product-gallery__wrapper {
+  width: 300px !important;
+} */
 
 //relacionados
 
 .relacionados {
-  overflow:hidden;
+  overflow: hidden;
+
   h2.tit {
     color: #3c3c3c;
     font-size: 20px;
@@ -516,9 +576,11 @@ a {
     margin: 40px 0;
   }
 }
+
 .relacionados-container {
   min-height: 350px;
 }
+
 .relacionados-card {
   position: relative;
   padding: 10px 15px;
@@ -528,6 +590,7 @@ a {
   height: 300px;
   background: #ffffff;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.13);
+
   h2 {
     color: #3c3c3c;
     font-family: Montserrat;
@@ -535,20 +598,24 @@ a {
     font-weight: 500;
     line-height: 23.52px;
   }
+
   span {
     color: $laranja;
     font-weight: 700;
     margin-top: 20px;
     font-size: 20px;
   }
+
   img {
     margin: 0 auto;
     width: 145px;
     transition: 0.3s;
+
     &:hover {
       transform: scale(1.1);
     }
   }
+
   .single-menos,
   .single-mais,
   .mais,
@@ -568,15 +635,18 @@ a {
       0px 2px 2px rgba(100, 100, 100, 0.15);
 
     border-radius: 50%;
+
     &:hover {
       transform: scale(1.1);
     }
   }
+
   .single-mais,
   .mais {
     background-image: url(../img/icons/mais.svg);
     bottom: 120px;
   }
+
   .circulo-verde {
     bottom: 15px;
     left: 32px;
@@ -584,9 +654,11 @@ a {
     height: 40px;
     cursor: pointer;
     box-shadow: 0px 2px 2px rgba(100, 100, 100, 0.15);
+
     &:hover {
       transform: scale(1.1);
     }
+
     a {
       position: absolute;
       left: 45px;
@@ -596,6 +668,7 @@ a {
       bottom: 10px;
       font-weight: 700;
     }
+
     &:after {
       content: "";
       display: flex;
@@ -609,11 +682,13 @@ a {
       align-items: center;
     }
   }
+
   .badge {
     background: $preto-claro;
     top: -6px;
     right: -6px;
   }
+
   .wishlist {
     display: inline-block;
     background: url(../img/icons/coracao-fundo.svg);
@@ -630,11 +705,13 @@ a {
     box-shadow: 0px 2px 2px rgba(100, 100, 100, 0.15);
 
     border-radius: 50%;
+
     &:hover {
       transform: scale(1.1);
     }
   }
 }
+
 .mobile .relacionados {
   h2.tit {
     margin: 0;
@@ -647,6 +724,7 @@ a {
     min-width: 250px;
     height: 300px;
     margin: 20px 10px;
+
     @include d(ss) {
       max-width: 200px;
       min-width: 200px;
@@ -666,9 +744,11 @@ a {
     }
   }
 }
+
 .categorias-mobile {
   display: none;
 }
+
 .mobile .categorias-mobile {
   margin: 10px 0;
   display: inline-block;
@@ -681,58 +761,76 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s;
+
   &:hover {
     transform: scale(1.1);
   }
 }
+
 .mobile .navbar-desktop {
   z-index: 1990;
 }
-.flex-viewport{
+
+.flex-viewport {
   max-width: 320px !important;
 }
 
 .yith-wcwl-add-to-wishlist span,
-.yith-wcwl-add-to-wishlist i{
+.yith-wcwl-add-to-wishlist i {
   display: none !important;
 }
-.yith-wcwl-add-to-wishlist .add_to_wishlist{
-    display: inline-block !important;
-    background: url(../img/icons/coracao-fundo.svg) !important;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    width: 40px !important;
-    height: 40px !important;
-    position: absolute !important;
-    cursor: pointer !important;
-    bottom: 15px !important;
-    right: 20px !important;
-    transition: 0.3s !important;
-    box-shadow: 0px 2px 2px rgba(100, 100, 100, 0.15) !important;
 
-    border-radius: 50% !important;
-    &:hover {
-      transform: scale(1.1) !important;
-    }
+.yith-wcwl-add-to-wishlist .add_to_wishlist {
+  display: inline-block !important;
+  background: url(../img/icons/coracao-fundo.svg) !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  width: 40px !important;
+  height: 40px !important;
+  position: absolute !important;
+  cursor: pointer !important;
+  bottom: 15px !important;
+  right: 20px !important;
+  transition: 0.3s !important;
+  box-shadow: 0px 2px 2px rgba(100, 100, 100, 0.15) !important;
+
+  border-radius: 50% !important;
+
+  &:hover {
+    transform: scale(1.1) !important;
   }
-  .yith-wcwl-wishlistaddedbrowse,
-  .yith-wcwl-wishlistexistsbrowse{
-    display: inline-block !important;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    width: 100px !important;
-    height: 40px !important;
-    position: absolute !important;
-    bottom: 5px !important;
-    right: 20px !important;
-    text-align: right !important;
-    transition: 0.3s !important;
-    a {
-      color: $laranja !important;
-    }
-    &:hover {
-      color: $laranja !important;
-    }
+}
+
+.yith-wcwl-wishlistaddedbrowse,
+.yith-wcwl-wishlistexistsbrowse {
+  display: inline-block !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  width: 100px !important;
+  height: 40px !important;
+  position: absolute !important;
+  bottom: 5px !important;
+  right: 20px !important;
+  text-align: right !important;
+  transition: 0.3s !important;
+
+  a {
+    color: $laranja !important;
   }
+
+  &:hover {
+    color: $laranja !important;
+  }
+}
+
+
+//lupinha
+.woocommerce-product-gallery__trigger{
+  position: absolute;
+  margin-top: 0;
+  left: 20px;
+  opacity: .5;
+
+}

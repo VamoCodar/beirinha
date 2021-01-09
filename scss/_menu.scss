@@ -674,7 +674,8 @@ body.carregou {
   transition: 1s ease !important;
   transition-delay: 5s;
   right: 0px;
- 
+  pointer-events: none !important;
+
   #cart-message{
     background:white !important;
     line-height: 1.4em;
@@ -685,4 +686,9 @@ body.carregou {
    
   
   }
+}
+
+#cart-tooltip_mobile{
+  
+  pointer-events: none !important;
 }

@@ -55,12 +55,29 @@ get_header(  ); ?>
                                     foreach ($product_cat as $parent_product_cat)
                                     {
 
+                                        /* <div class="categoria__row">
+                                        <a class="categoria-item-link" href="' . get_term_link($parent_product_cat->term_id) . '"> ' . $parent_product_cat->name . ' </a>
+
+                                            <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-' . $i . '" aria-controls="collapse-' . $i . '">
+                                            
+                                            </a>
+                                            </div>
+                                            <div class="collapse" id="collapse-' . $i . '" data-parent="#accordion-categorias">'; */
+
                                         echo '                                        
 
-                                            <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-'.$i.'" aria-controls="collapse-'.$i.'">
-                                            ' . $parent_product_cat->name . '
+                                            <div class="categoria__row">
+                                            
+                                            <a class="categoria-item-link" href="' . get_term_link($parent_product_cat->term_id) . '"> ' . $parent_product_cat->name . ' </a>
+
+                                            <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-' . $i . '" aria-controls="collapse-' . $i . '">
+                                            
                                             </a>
+                                            
+                                            </div>
+
                                             <div>
+
                                                 <div class="collapse" id="collapse-'.$i.'" data-parent="#accordion-categorias">';
 
                                                 // SubCategorias    

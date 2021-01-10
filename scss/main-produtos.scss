@@ -105,16 +105,7 @@ a {
     padding-left: 0px;
   }
 
-  //promoções azul
-  .promo {
-    padding: 0;
-
-    h3 {
-      color: $laranja;
-      font-weight: 500;
-      font-size: 16px;
-    }
-  }
+  
 
   form {
     border-top: 5px solid #fbfbfb;
@@ -127,7 +118,7 @@ a {
       font-size: 14px;
       cursor: pointer;
 
-      &:after {
+      /* &:after {
         content: "";
         background-image: url("../img/icons/setinha.svg");
         background-repeat: no-repeat;
@@ -136,7 +127,7 @@ a {
         height: 7px;
         display: inline-block;
         margin-left: 5px;
-      }
+      } */
     }
 
     a {
@@ -199,7 +190,7 @@ a {
     font-size: 14px;
     cursor: pointer;
 
-    &:after {
+    /*  &:after {
       content: "";
       background-image: url("../img/icons/setinha.svg");
       background-repeat: no-repeat;
@@ -208,7 +199,7 @@ a {
       height: 7px;
       display: inline-block;
       margin-left: 5px;
-    }
+    } */
   }
 
   #collapse-ordenar {
@@ -249,7 +240,7 @@ a {
     height: 100% !important;
 
     a:not(.nav-link) {
-      padding: 15px 0;
+      padding: 10px 0;
     }
   }
 }
@@ -827,10 +818,99 @@ a {
 
 
 //lupinha
-.woocommerce-product-gallery__trigger{
+.woocommerce-product-gallery__trigger {
   position: absolute;
   margin-top: 0;
   left: 20px;
   opacity: .5;
 
+}
+
+//resolver categorias
+#accordion-categorias {
+  .categoria__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 12px;
+    margin-left: 0;
+    align-items: center;
+    
+  }
+
+  a.nav-link {
+    background-image: url("../img/icons/setinha.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5px;
+    height: 100%;
+    padding: 8px 8px !important;
+    // display: inline-block;
+
+    cursor: pointer;
+  }
+}
+
+.categorias form a {
+  margin-left: 0px !important;
+  font-size: 14px;
+}
+
+.categorias form a:not(.categoria-item-link, .promo) {
+  margin-left: 15px !important;
+  font-size: 12px;
+}
+//promoções azul
+.promo {
+  padding: 0;
+
+  h3 {
+    color: $laranja;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.mobile{
+  #accordion-categorias {
+    .categoria__row {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px 12px;
+      margin-left: 0;
+      align-items: center;
+      
+    }
+  
+    a.nav-link {
+      background-image: url("../img/icons/setinha.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 5px;
+      height: 100%;
+      padding: 8px 8px !important;
+      // display: inline-block;
+  
+      cursor: pointer;
+    }
+  }
+  
+  /* .categorias form a {
+    margin-left: 0px !important;
+    font-size: 14px !important;
+  }
+  
+  .categorias form a:not(.categoria-item-link, .promo) {
+    margin-left: 15px !important;
+    font-size: 12px !important;
+  } */
+  //promoções azul
+  .promo {
+    padding: 0;
+  
+    h3 {
+      color: $laranja;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
 }

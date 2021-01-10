@@ -43,7 +43,7 @@ $link = substr($link, 0, strpos($link, "?"));
                     <h2>CATEGORIAS</h2>
                     <form class="accordion" id="accordion-categorias">
                         
-                    <a class="promo" href="<?php echo get_site_url(); ?>/categoria/promocoes/"> <h3>Promoções</h3> </a>
+                    <a class="promo" id="promo" href="<?php echo get_site_url(); ?>/categoria/promocoes/"> <h3>Promoções</h3> </a>
 
                      <?php
 
@@ -66,12 +66,30 @@ $link = substr($link, 0, strpos($link, "?"));
                                     $i = 1;
                                     foreach ($product_cat as $parent_product_cat)
                                     {
+                                        /*  <div class="categoria__row">
+                                            
+                                            <a class="categoria-item-link" href="' . get_term_link($parent_product_cat->term_id) . '"> ' . $parent_product_cat->name . ' </a>
+
+                                            <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-' . $i . '" aria-controls="collapse-' . $i . '">
+                                            
+                                            </a>
+                                            
+                                            </div> */
 
                                         echo '                                        
 
-                                            <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-'.$i.'" aria-controls="collapse-'.$i.'">
-                                            ' . $parent_product_cat->name . '
-                                            </a>
+                                        <div class="categoria__row">
+                                            
+                                        <a class="categoria-item-link" href="' . get_term_link($parent_product_cat->term_id) . '"> ' . $parent_product_cat->name . ' </a>
+
+                                        <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-' . $i . '" aria-controls="collapse-' . $i . '">
+                                        
+                                        </a>
+                                        
+                                        </div>
+                                           
+                                           
+                                           
                                             <div>
                                                 <div class="collapse" id="collapse-'.$i.'" data-parent="#accordion-categorias">';
 

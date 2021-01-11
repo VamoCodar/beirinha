@@ -236,26 +236,21 @@ a {
   margin-top: 20px;
   margin-left: 10%;
   .mapa-produto {
-    span {
+    .woocommerce-breadcrumb {
       color: #c2c2c2;
-
-      &:after {
-        content: "";
-        display: inline-block;
-        width: 1px;
-        height: 22px;
-        background: #c2c2c2;
-        vertical-align: middle;
-        margin-left: 15px;
-      }
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    p {
-      text-decoration: underline;
       text-transform: uppercase;
       margin-left: 15px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    a:link{
+      color:$laranja;
+      text-decoration: none;
+    }
+    a:hover{
+      color:$laranja;
+      text-decoration: underline;
     }
   }
 }
@@ -692,11 +687,11 @@ a {
   max-width: 320px !important;
 }
 
-.yith-wcwl-add-to-wishlist span,
-.yith-wcwl-add-to-wishlist i{
+.beirinha-cart-add .yith-wcwl-add-to-wishlist span,
+.beirinha-cart-add .yith-wcwl-add-to-wishlist i{
   display: none !important;
 }
-.yith-wcwl-add-to-wishlist .add_to_wishlist{
+.beirinha-cart-add .yith-wcwl-add-to-wishlist .add_to_wishlist{
     display: inline-block !important;
     background: url(../img/icons/coracao-fundo.svg) !important;
     background-repeat: no-repeat !important;
@@ -716,8 +711,8 @@ a {
       transform: scale(1.1) !important;
     }
   }
-  .yith-wcwl-wishlistaddedbrowse,
-  .yith-wcwl-wishlistexistsbrowse{
+  .beirinha-cart-add .yith-wcwl-wishlistaddedbrowse,
+  .beirinha-cart-add .yith-wcwl-wishlistexistsbrowse{
     display: inline-block !important;
     background-repeat: no-repeat !important;
     background-size: contain !important;
@@ -731,8 +726,28 @@ a {
     transition: 0.3s !important;
     a {
       color: $laranja !important;
+      font-size: 10px !important;
     }
     &:hover {
       color: $laranja !important;
     }
   }
+
+  .woocomerce-product-gallery{
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+ .wp-post-image{
+    height: 400px !important;
+    width: 400px !important;
+    object-fit: contain;
+    @include d(s){
+      width:240px !important;
+    }
+}
+.pswp {
+  z-index: 9999999 !important;
+}

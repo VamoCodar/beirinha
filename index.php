@@ -229,7 +229,7 @@ $secao2IconeTexto = pods('opes_home2');
                             <a href="<?php echo get_permalink($post['ID']) ?>">
                                 <h2><?php echo $post['post_title'] ?></h2>
                             </a>
-                            <a class="btn-receita" href="<?php echo get_site_url(); ?>/receitas/">Ver tudo</a>
+                            <a class="btn-receita" href="<?php echo get_permalink($post['ID']) ?>">Ver tudo</a>
                         </div>
                     <?php endforeach; wp_reset_query(); ?>
                 </div>

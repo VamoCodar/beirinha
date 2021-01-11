@@ -6,32 +6,77 @@ Template Name: Sobre Nós
 get_header();?>
 
 <div class="container sobre-container">
-    <div class="row mt-5">
+	<div class="row">
+		<div class="col-md-6">
 
-        <div class="text-sobre">
-            <h2 class="mb-4"><?php the_title(); ?></h2>
-            <?php the_content(); ?>
-        </div>
-    </div>
+			<div class="text-sobre">
+				<h2 class="mb-4"><?php the_title(); ?></h2>
+				<?php the_content(); ?>
+			</div>
+		</div>    
+		
+		<div class="col-md-6">
+		   <div class="grid-layout">
+				<?php $images = acf_photo_gallery('galeria', $post->ID); 
+				$i = 1;
+				if( count($images) ):
+				  //Cool, we got some data so now let's loop over it
+				  foreach($images as $image):
+					  $id = $image['id']; // The attachment id of the media
+					  $title = $image['title']; //The title
+					  $caption= $image['caption']; //The caption
+					  $full_image_url= $image['full_image_url']; //Full size image url
+					  $full_image_url = acf_photo_gallery_resize_image($full_image_url, 650, 560); //Resized size to 262px width by 160px height image url
+				 
+				  ?>
 
+					  <div class="grid-item grid-item-1 span-<?php echo $i; ?>">
+						 
+							  <img class="img-about img<?php echo $i; ?>" src="<?php echo $full_image_url; ?>" alt="<?php echo $title; ?>" title="<?php echo $title; ?>">
+					   
+					  </div>
+
+					  <?php $i++; endforeach; endif; ?> 
+
+			 </div>
+		</div>
+
+	</div>
+	   <link href="<?php bloginfo( 'template_url' ); ?>/css/map.css" rel="stylesheet">
+	
+</div>
+</div>
 </div>
 
-<div class="mapa mt-5">
-    <div id="mapid" style="width: 100%; height: 400px;"></div>
-</div>
+<div id="mapid"></div>
+
+
+
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/leaflet2.js"></script>
 
 <script>
 
-	var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    // MAP
+    var map = L.map('mapid', {
+    scrollWheelZoom: false
+}).setView([40.231143, -7.510231], 16);
 
-	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=sk.eyJ1IjoicGVkcm9ocGltZW50YSIsImEiOiJja2ptYnR6MGgyYm1zMnJsb2V4Mm5kY2lwIn0.r6q85c6UZkRKDfNgHBU-MQ', {
-		maxZoom: 18,
-		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		id: 'mapbox/streets-v11',
-		tileSize: 512,
-		zoomOffset: -1
-	}).addTo(mymap);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(map);
+
+
+var markicon = L.icon({
+     iconUrl: '<?php bloginfo( 'template_url' ); ?>/images/mark-icon.svg',
+     iconSize: [38, 95], // size of the icon
+     popupAnchor: [0,-15]
+     });
+	 
+
+       // create marker object, pass custom icon as option, pass content and options to popup, add to map
+    L.marker([40.231143, -7.510231], {icon: markicon}).addTo(map);
+
+
+
+
 
 </script>
 

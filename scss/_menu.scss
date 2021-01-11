@@ -682,7 +682,49 @@ body.carregou {
     font-weight: 500;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: black;
-   
-  
+    position: absolute !important;
+    right: 0;
+    top: 34px;
+ 
   }
+}
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+top: 14px;
+border-width: .4rem .4rem 0;
+border-top-color: $laranja !important;
+transform: rotate(180deg);
+}
+
+/* estilos do chat */
+#chat {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 110px;
+  padding: 13px 10px;
+  border-radius: 90px 90px 90px 0px;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+  cursor: pointer;
+  z-index: 999999;
+}
+#chat:hover{
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+#chat:before {
+  content: "";
+  width: 103px;
+  height: 46px;
+  position: absolute;
+  left: 15px;
+  background-size: cover;
+  background-position: center;
+   background-image: url('../img/chat.png'); 
+  display: inline-block;
+  z-index: 9999;
 }

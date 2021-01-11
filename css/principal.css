@@ -34,3 +34,13 @@ a.added_to_cart {
     text-align: center;
     color: white
 }
+
+.carousel-item img{    object-fit: cover!important;   height: 600px!important;}
+
+@media (max-width: 767px){
+	.carousel-item img{    height: 400px!important;}
+}
+
+@media (max-width: 450px){
+	.carousel-item img{     height: 250px!important;}
+}

@@ -173,7 +173,9 @@ get_header(  ); ?>
                         
 
                         <span class="valor"><p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p></span>
-                        <div class="favorito"> <span></span> Adicionar aos favoritos</div>
+                        <div class="favorito">
+                        <?php //echo do_shortcode('[yith_wcwl_add_to_wishlist]'); ?>
+                        </div>
                        
                         <div class="row linha beirinha-cart-add">
                             <span class="single-menos"></span>

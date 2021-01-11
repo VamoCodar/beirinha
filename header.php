@@ -31,6 +31,7 @@
 			<!-- Bootstrap CSS customizado -->
 			<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-categorias.css">
 	<?php }	?>
+	
 
 	<?php if ( is_singular('post') ){ ?>
 	<!-- CSS Receitas -->
@@ -44,13 +45,21 @@
 	<?php if( is_page_template(array('default')) ){
 
 				if ( !is_product() ){
+
+					if ( !is_cart() ){
 		
 		?>
 		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-sobre.css">
-	<?php }} ?>	
+	<?php } }
+		} ?>	
 	<?php if ( is_page() && !is_page_template() ) { ?>
 		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-receitas.css">
 	<?php } ?>	
+
+	<?php if( is_page_template( 'page-receitas.php' ) ){ ?>
+		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/main-receitas.css">
+	<?php } ?>
+
 	<title>
 		<?php
 			if(!strrpos($_SERVER['REQUEST_URI'],'home')) 
@@ -69,6 +78,10 @@
 </head>
 
 <body <?php body_class('menu-closed'); ?>>
+
+<a href="https://api.whatsapp.com/send?phone=351961756040" target="_blank">
+	<span id="chat"></span>
+</a>
 
 <?php get_template_part( 'inc/header', 'block' ); ?>
 

@@ -106,6 +106,7 @@
 
 .dropdown-menu {
   z-index: 1040;
+
 }
 
 // encomendas
@@ -350,7 +351,7 @@
     transition: 0.3s;
 
     //taamanho do botao categorias é dado pelo padding nos As
-    a {
+    a:not(.categoria-item-link) {
       padding: 10px 90px;
       display: block;
       font-weight: 500;
@@ -364,6 +365,7 @@
       text-align: start;
     }
   }
+  
 
   //setinha de categorias
   .categorias::after {
@@ -439,7 +441,7 @@
     display: inline-block;
 
     //setinha dos items
-    &:after {
+   /*  &:after {
       content: "";
       background-image: url("../img/icons/setinha.svg");
       background-repeat: no-repeat;
@@ -450,7 +452,8 @@
       right: 20px;
       top: 17px;
       position: absolute;
-    }
+      cursor: pointer;
+    } */
   }
 }
 
@@ -487,6 +490,26 @@
 
 .categorias {
   font-weight: 500;
+  
+}
+.categoria-item{
+  .categoria__row{
+    display: flex;
+  justify-content: space-between;
+  margin: 15px 12px;
+  align-items: center;
+  }
+  a.nav-link{
+    background-image: url("../img/icons/setinha.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 5px;
+      height:100%;
+      padding: 8px 8px !important;
+     // display: inline-block;
+     
+      cursor: pointer;
+  }
 }
 
 .busca .btn-secondary {
@@ -635,6 +658,7 @@
   }
 }
 
+
 .mobile .sub-navbar-mobile .sacola-link {
   @include d(ss) {
     padding: 10px 0px;
@@ -674,7 +698,8 @@ body.carregou {
   transition: 1s ease !important;
   transition-delay: 5s;
   right: 0px;
- 
+  pointer-events: none !important;
+
   #cart-message{
     background:white !important;
     line-height: 1.4em;
@@ -727,4 +752,8 @@ transform: rotate(180deg);
    background-image: url('../img/chat.png'); 
   display: inline-block;
   z-index: 9999;
+
+#cart-tooltip_mobile{
+  
+  pointer-events: none !important;
 }

@@ -43,12 +43,15 @@ endif;
                     </div>-->
                 <!-- encomendas -->
                 <div class="encomendas">
-                    <a href="<?php echo get_site_url(); ?>/minha-conta/orders/"><span class="icon-encomendas"></span>Encomendas</a>
+                    <a href="<?php echo get_site_url(); ?>/minha-conta/orders/"><span
+                            class="icon-encomendas"></span>Encomendas</a>
                 </div>
                 <!-- minha conta -->
                 <div class="minha-conta">
-                    <a class="minha-conta-link" href="<?php echo get_site_url(); ?>/minha-conta/"><span class="icon-conta"></span>Minha Conta</a>
-                    <a href="<?php echo get_site_url(); ?>/wishlist/"><span class="favoritas"><i class="badge">1</i></span></a>
+                    <a class="minha-conta-link" href="<?php echo get_site_url(); ?>/minha-conta/"><span
+                            class="icon-conta"></span>Minha Conta</a>
+                    <a href="<?php echo get_site_url(); ?>/wishlist/"><span class="favoritas"><i
+                                class="badge">1</i></span></a>
                     <a href="<?php echo get_site_url(); ?>/carrinho/">
                         <span id="cart" class="sacola">
                             <i id="badgeHeader" class="<?php echo $class; ?> badge"><?php echo $totalItems; ?></i>
@@ -71,11 +74,13 @@ endif;
             <a href="<?php echo get_site_url(); ?>" class="logo"></a>
             <div class="itens-sub-nav row">
                 <div class="minha-conta">
-                    <a class="minha-conta-link" href="<?php echo get_site_url(); ?>/minha-conta/"><span class="icon-conta"></span></a>
+                    <a class="minha-conta-link" href="<?php echo get_site_url(); ?>/minha-conta/"><span
+                            class="icon-conta"></span></a>
 
                     <a class="sacola-link" href="<?php echo get_site_url(); ?>/carrinho/">
                         <span id="cart" class="sacola">
-                        <i id="badgeHeader_mobile" class="<?php echo $class; ?> badge"><?php echo $totalItems; ?></i>
+                            <i id="badgeHeader_mobile"
+                                class="<?php echo $class; ?> badge"><?php echo $totalItems; ?></i>
                             <div id="cart-tooltip_mobile" class="tooltip bs-tooltip-top" role="tooltip">
                                 <div class="arrow"></div>
                                 <div id="cart-message_mobile" class="tooltip-inner">Produtos</div>
@@ -104,17 +109,18 @@ endif;
 
             ?>
 
-                    <div class=" navbar-collapse" id="navbarContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="categorias nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Categorias
-                                </a>
-                                <div class="dropdown-menu dropbottom">
-                                    <form class="accordion" id="accordion-categorias">
+            <div class=" navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="categorias nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categorias
+                        </a>
+                        <div class="dropdown-menu dropbottom">
+                            <form class="accordion" id="accordion-categorias">
 
 
-                                        <?php
+                                <?php
 
                                         $exclude_ids   = array();
                                         $exclude_names = array("Promoções"); // Categorias para Excluir da Lista do Menu
@@ -139,9 +145,14 @@ endif;
                                             echo '
 
                                         <div class="categoria-item">
+                                        
+                                        <div class="categoria__row">
+                                        <a class="categoria-item-link" href="' . get_term_link($parent_product_cat->term_id) . '"> ' . $parent_product_cat->name . ' </a>
+
                                             <a class="nav-link item-accordion" data-toggle="collapse" data-target="#collapse-' . $i . '" aria-controls="collapse-' . $i . '">
-                                            ' . $parent_product_cat->name . '
+                                            
                                             </a>
+                                            </div>
                                             <div class="collapse" id="collapse-' . $i . '" data-parent="#accordion-categorias">';
 
                                             // SubCategorias    
@@ -150,6 +161,7 @@ endif;
                                                 'hide_empty' => false,
                                                 'parent' => $parent_product_cat->term_id
                                             );
+                                            
                                             $child_product_cats = get_terms($child_args);
                                             foreach ($child_product_cats as $child_product_cat) {
                                                 echo '<a href="' . get_term_link($child_product_cat->term_id) . '" class="collapse px-3 ">' . $child_product_cat->name . '</a>';
@@ -161,11 +173,11 @@ endif;
                                             $i++;
                                         }
                                         ?>
-                                    </form>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <?php
                     }
                 }
@@ -180,7 +192,8 @@ endif;
             </div>
             <form action="<?php echo get_site_url(); ?>/" method="get" class="input-group busca ml-auto">
                 <div class="input-group busca ml-auto">
-                    <input type="text" class="form-control" name="s" placeholder="Digite o produto aqui" aria-label="Digite o produto aqui" aria-describedby="button-addon2" required>
+                    <input type="text" class="form-control" name="s" placeholder="Digite o produto aqui"
+                        aria-label="Digite o produto aqui" aria-describedby="button-addon2" required>
                     <div class="input-group-append">
                         <button class="btn btn-secondary" type="submit" id="button-addon2">Pesquisar</button>
                     </div>

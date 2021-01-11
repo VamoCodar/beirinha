@@ -206,7 +206,10 @@ function targetMenu(event) {
             menuMobile.removeAttribute("style", "animation");
         }, 300);
     }
-}
+};
+
+  
+
 window.addEventListener("resize", resize);
 document.addEventListener("DOMContentLoaded", checagem);
 botaoMenuMobile.addEventListener("click", abreMenu);

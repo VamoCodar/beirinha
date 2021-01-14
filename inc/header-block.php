@@ -24,9 +24,9 @@ endif;
                                                                         echo get_bloginfo('description'); ?>"></a>
             <div class="itens-sub-nav row">
                 <!-- sociais -->
-                <a href="#"><span class="youtube"></span></a>
-                <a href="#"><span class="facebook"></span></a>
-                <a href="#"><span class="instagram"></span></a>
+                <!--<a href="#"><span class="youtube"></span></a> -->
+                <a href="https://www.facebook.com/beirinhaptg" target="_blank"><span class="facebook"></span></a>
+                <!--<a href="#"><span class="instagram"></span></a> -->
                 <!-- lingua dropdown 
                     <div class="linguagem">
                         <div class="dropdown text-black show">
@@ -187,7 +187,7 @@ endif;
                 <ul class="row">
                     <li><a href="<?php echo get_site_url(); ?>/sobre-nos/">Sobre nós</a></li>
                     <li><a href="<?php echo get_site_url(); ?>/receitas/">Receitas</a></li>
-                    <li><a href="<?php echo get_site_url(); ?>/categoria/promocoes/">Promoçoes</a></li>
+                    <li><a href="<?php echo get_site_url(); ?>/categoria/promocoes/">Promoções</a></li>
                 </ul>
             </div>
             <form action="<?php echo get_site_url(); ?>/" method="get" class="input-group busca ml-auto">

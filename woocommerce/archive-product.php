@@ -148,7 +148,8 @@ $link = substr($link, 0, strpos($link, "?"));
 			</aside>
 			
 			<section class="produtos">
-                <div class="mapa-produto row align-items-center"> <?php //do_action( 'woocommerce_before_main_content' ); ?>
+                <div class="mapa-produto row align-items-center"> 
+                <?php do_action( 'woocommerce_before_main_content' ); ?></div>
                 </div>
                 
                 <div class="row mx-0 produtos-container justify-content-center">
@@ -166,6 +167,11 @@ $link = substr($link, 0, strpos($link, "?"));
 						//do_action( 'woocommerce_before_shop_loop' );
 						$i = 1;
 						if ( wc_get_loop_prop( 'total' ) ) {
+
+                            global $wp_query;
+                            $args = array_merge( $wp_query->query_vars, ['posts_per_page' => 9 ] );
+                            query_posts( $args );
+
 							while ( have_posts() ) {
                                 the_post();
 

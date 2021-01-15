@@ -58,10 +58,12 @@ $secao2IconeTexto = pods('opes_home2');
                 <p><?php echo $secao1Direita->display('bloco_1_direita_titulo'); ?></p>
                 <h5><?php echo $secao1Direita->display('bloco_1_direita_subtitulo'); ?></h5>
                 <?php if($secao1Direita->display('bloco_1_texto_botao') != "" ){ ?>
-                <button class="comprar">
-                    <div class="circulo-completo"><span class="circulo-branco"></span><span class="circulo-verde"></span> <i></i></div>
-                        <a href="<?php echo $secao1Direita->display('bloco_1_link_do_botao'); ?>"><?php echo $secao1Direita->display('bloco_1_texto_botao'); ?></a>
-                </button>
+                <a href="<?php echo $secao1Direita->display('bloco_1_link_do_botao'); ?>">
+                    <button class="comprar">
+                        <div class="circulo-completo"><span class="circulo-branco"></span><span class="circulo-verde"></span> <i></i></div>
+                            <a href="<?php echo $secao1Direita->display('bloco_1_link_do_botao'); ?>"><?php echo $secao1Direita->display('bloco_1_texto_botao'); ?></a>
+                    </button>
+                </a>
                 <?php } ?>
                 <span class="pao" style="background-image: url(<?php echo $secao1Direita->display('bloco_1_imagem'); ?>);"></span>
             </div>

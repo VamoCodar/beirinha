@@ -48,10 +48,12 @@ $args = array(
 								<h2><?php the_title() ?></h2>
 								<p><?php echo get_the_content() ?></p>
 								<?php if($botao != ""){ ?>
-								<button class="comprar">
-									<div class="circulo-completo"><span class="circulo-branco"></span><span class="circulo-verde"></span> <i></i></div>
-									<a href="<?php echo $link_banner; ?>"><?php echo $botao; ?></a>
-								</button>
+                                    <a href="<?php echo $link_banner; ?>">
+                                        <button class="comprar">
+                                        <div class="circulo-completo"><span class="circulo-branco"></span><span class="circulo-verde"></span> <i></i></div>
+                                        <a href="<?php echo $link_banner; ?>"><?php echo $botao; ?></a>
+                                        </button>
+                                    </a>
 								<?php } ?>
 							</div>
 						</div>

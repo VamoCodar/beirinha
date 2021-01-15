@@ -25,14 +25,22 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main-produtos.css">
 	<?php } ?>
 
-	<?php if (is_archive() || is_search()) { ?>
-		<!-- slider -->
-		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/jsr.css">
+	<?php if (is_archive() || is_search()) {
+		
+				if( is_product_category() ) {
+					?>
+				<!-- slider -->
+				<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/jsr.css">
 
-		<!-- Bootstrap CSS customizado -->
-		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main-categorias.css">
-		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main-receitas.css">
-	<?php }	?>
+				<!-- Bootstrap CSS customizado -->
+				<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main-categorias.css">
+				<?php
+				}else{
+				?>
+					<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main-receitas.css">
+				<?php }
+		
+	 		}?>
 
 
 	<?php if (is_singular('post')) { ?>

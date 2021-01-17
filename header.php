@@ -16,6 +16,8 @@
 	<!-- swiper CSS CARROUSEL -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/flexslider.css" type="text/css" media="screen" />
+
 	<!-- Bootstrap CSS customizado -->
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main-home.css">
 
@@ -70,6 +72,16 @@
 	<?php if (is_page_template('page-receitas.php')) { ?>
 		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main-receitas.css">
 	<?php } ?>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- javascript -->
 
 	<title>
 		<?php

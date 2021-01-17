@@ -116,11 +116,11 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <?php if ( is_home() || is_front_page() ){ ?>
-<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-front.js"></script>
+<script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-front.js?v01"></script>
 <?php }	?>
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-cart.js"></script>
 
-<?php if ( is_product() ){ ?>
+<?php if ( is_product() || (is_singular('post')) ){ ?>
 <!-- script vannila-->
 <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-front-produtos.js"></script>
 <?php	} ?>
@@ -138,7 +138,6 @@
     <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/js/script-front-receitas.js"></script>
 <?php } ?>
     
-
 <?php wp_footer(); ?>
 
 <!-- GetButton.io widget -->
@@ -233,6 +232,10 @@ window.addEventListener("resize", resize);
 document.addEventListener("DOMContentLoaded", checagem);
 botaoMenuMobile.addEventListener("click", abreMenu);
 body.addEventListener("click", targetMenu);
+
 </script>
+
+<script src="<?php bloginfo( 'template_url' ); ?>/assets/vendors/highlight.js"></script>
+<script src="<?php bloginfo( 'template_url' ); ?>/assets/js/app.js"></script>
     
 </html>

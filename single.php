@@ -22,8 +22,27 @@
 		<div class="content">
 			<?php the_content();?>
 		</div>
-				
+
+
+		<?php		
+		$idsRelacionados = get_field('produtos_relacionados');
+
+		if($idsRelacionados){
+		?>
+			<section class="relacionados mb-5">
+					<h2 class="tit">Produtos Relacionados</h2>
+					<div class="container">
+						<div id="swiper-container">
+							<div class="swiper-wrapper promo-container">					
+								<?php echo getProdutosCarrossel('Relacionados', 20, '', 'promo-card'); ?>
+							</div>
+						</div>
+					</div>
+			</section>
+		<?php }?>
 	</div>
+
+	
 	
  <?php endwhile;
  wp_reset_postdata();

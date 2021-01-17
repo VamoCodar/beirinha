@@ -18,40 +18,30 @@ $secao2IconeTexto = pods('opes_home2');
 
             <div class="cards owl-carousel">
 
-                <button class="card" style="background-image: url(<?php echo $secao1Slider->display('imagem_1'); ?>);">
-                <?php if($secao1Slider->display('numero_1') != "" ){ ?>
-                    <span><?php echo $secao1Slider->display('numero_1'); ?></span>
-                <?php } ?>
-                    <div class="card-context">
-                        <h5><?php echo $secao1Slider->display('titulo1'); ?></h5>
-                        <p><?php echo $secao1Slider->display('subtitulo_1'); ?></p>
-                        <i class="left"></i> <i class="right"></i>
-                    </div>
-                </button>
-                <?php if($secao1Slider->display('titulo2') != "" ){ ?>
-                    <button class="card" style="background-image: url(<?php echo $secao1Slider->display('imagem_2'); ?>);">
-                        <?php if($secao1Slider->display('numero_2') != "" ){ ?>
-                            <span><?php echo $secao1Slider->display('numero_2'); ?></span>
-                        <?php } ?>
-                            <div class="card-context">
-                                <h5><?php echo $secao1Slider->display('titulo2'); ?></h5>
-                                <p><?php echo $secao1Slider->display('subtitulo_2'); ?></p>
-                                <i class="left"></i> <i class="right"></i>
-                            </div>
+            <?php
+            
+            $args = array(
+                'post_type' => 'banner_secundrio',
+                'orderby' => 'post_date',
+                'order' => 'DES',
+                'posts_per_page' => -1
+            );
+            $homeSlider = new WP_Query($args);
+            $i = 1;
+            if ($homeSlider->have_posts()) : while ($homeSlider->have_posts()) : $homeSlider->the_post(); 
+
+            $img_banner = get_post_meta( $post->ID, 'imagem_secundaria', true); 
+            $url_image = $img_banner[ 'guid' ];
+            ?>
+                    <button class="card" style="background-image: url(<?php echo $url_image; ?>);">
+                        <span><?php echo '0'.$i; ?></span>
+                        <div class="card-context">
+                            <h5><?php the_title(); ?></h5>
+                            <p><?php echo get_the_content(); ?></p>
+                            <i class="left"></i> <i class="right"></i>
+                        </div>
                     </button>
-                <?php } ?>
-                <?php if($secao1Slider->display('titulo3') != "" ){ ?>
-                    <button class="card" style="background-image: url(<?php echo $secao1Slider->display('imagem_3'); ?>);">
-                        <?php if($secao1Slider->display('numero_3') != "" ){ ?>
-                            <span><?php echo $secao1Slider->display('numero_3'); ?></span>
-                        <?php } ?>
-                            <div class="card-context">
-                                <h5><?php echo $secao1Slider->display('titulo3'); ?></h5>
-                                <p><?php echo $secao1Slider->display('subtitulo_3'); ?></p>
-                                <i class="left"></i> <i class="right"></i>
-                            </div>
-                    </button>
-                <?php } ?>
+                <?php $i++;  endwhile; wp_reset_postdata(); endif; ?>
             </div>
 
             <div class="padaria">

@@ -34,31 +34,37 @@ $args = array(
             $botao =  get_post_meta(get_the_ID(), 'botao', true);
             $headline =  get_post_meta(get_the_ID(), 'headline', true);
 
-            //var_dump($img_banner);
-            
+            ?>
 
-?>
-            <div class="carousel-item <?php if($i === 1){echo 'active';} ?>">
-                <img class="d-block w-100" src="<?php echo $url_image; ?>" alt="<?php the_title() ?>">
-                <div class="carousel-caption">
-					
+            <div class="carousel-item <?php if($i === 1){echo 'active';} ?> <?php if(end(explode(".",$url_image)) == "mp4") { echo 'div-video'; } ?> ">
+                <?php 
+                    if(end(explode(".",$url_image)) =="mp4") {
+                 ?>  
+                 <div class="bgvideo d-block">                 
+                    <video autoplay loop muted playsinline id="homevideo">
+                    <source src="<?php echo $url_image; ?>" type="video/mp4">
+                    </video>
+                </div>                   
+                <?php }else{ ?>
+                    <img class="d-block w-100" src="<?php echo $url_image; ?>" alt="<?php the_title() ?>">
+                <?php } ?>
+
+                <div class="carousel-caption">					
 						<div class="col-md-6">
 							<div class="slide-section">
 								<h5><?php echo $headline; ?></h5>
 								<h2><?php the_title() ?></h2>
 								<p><?php echo get_the_content() ?></p>
-								<?php if($botao != ""){ ?>
                                     <a href="<?php echo $link_banner; ?>">
                                         <button class="comprar">
                                         <div class="circulo-completo"><span class="circulo-branco"></span><span class="circulo-verde"></span> <i></i></div>
                                         <a href="<?php echo $link_banner; ?>"><?php echo $botao; ?></a>
                                         </button>
                                     </a>
-								<?php } ?>
 							</div>
 						</div>
-					
                 </div>
+            
             </div>
 
 

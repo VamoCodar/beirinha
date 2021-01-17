@@ -171,7 +171,7 @@ function wps_breadcrumb_delimiter( $defaults ) {
 
 function getProdutosCarrossel($categoria = '', $quantidade, $idsRelacionados = [], $div){
 
-
+		
 		if($categoria == 'Rand'){
 			$args = array(
 				'post_type' => array('product'),
@@ -187,6 +187,18 @@ function getProdutosCarrossel($categoria = '', $quantidade, $idsRelacionados = [
 				'post__in'       => $idsRelacionados
 			);
 		}
+
+		if($categoria == 'Relacionados'){
+			$idsRelacionados = get_field('produtos_relacionados');
+
+			$args = array(
+				'post_type'      => 'product',
+				'posts_per_page' => $quantidade,
+				'post__in'       => $idsRelacionados
+			);
+
+		}
+
 
 		$loop = new WP_Query( $args );
 		$i = 0;

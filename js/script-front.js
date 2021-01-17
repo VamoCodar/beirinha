@@ -269,9 +269,11 @@ $(".left").click(function () {
 //
 
 let doly = document.querySelector(".slide-section-doly");
+
+if(doly){
 let elemento = doly.firstElementChild;
 let dolyItem = document.querySelector(".slide-section");
-
+}
 
 window.addEventListener("scroll", animaScroll);
 //window.addEventListener("resize", resize);

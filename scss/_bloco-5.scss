@@ -211,11 +211,11 @@
     }
   }
 }
-.yith-wcwl-add-to-wishlist span,
-.yith-wcwl-add-to-wishlist i{
+.beirinha-cart-add .yith-wcwl-add-to-wishlist span,
+.beirinha-cart-add .yith-wcwl-add-to-wishlist i{
   display: none;
 }
-.yith-wcwl-add-to-wishlist .add_to_wishlist{
+.beirinha-cart-add .yith-wcwl-add-to-wishlist .add_to_wishlist{
     display: inline-block;
     background: url(../img/icons/coracao-fundo.svg);
     background-repeat: no-repeat;
@@ -235,8 +235,8 @@
       transform: scale(1.1);
     }
   }
-  .yith-wcwl-wishlistaddedbrowse,
-  .yith-wcwl-wishlistexistsbrowse{
+  .beirinha-cart-add .yith-wcwl-wishlistaddedbrowse,
+  .beirinha-cart-add .yith-wcwl-wishlistexistsbrowse{
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;

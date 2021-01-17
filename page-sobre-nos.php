@@ -16,8 +16,12 @@ get_header();?>
 		</div>    
 		
 		<div class="col-md-6">
+		<?php $images = acf_photo_gallery('galeria', $post->ID); 
+		
+		if( count($images) <= 1){
+		?>
 		   <div class="grid-layout">
-				<?php $images = acf_photo_gallery('galeria', $post->ID); 
+				<?php 
 				$i = 1;
 				if( count($images) ):
 				  //Cool, we got some data so now let's loop over it
@@ -28,7 +32,7 @@ get_header();?>
 					  $full_image_url= $image['full_image_url']; //Full size image url
 					  $full_image_url = acf_photo_gallery_resize_image($full_image_url, 650, 560); //Resized size to 262px width by 160px height image url
 				 
-				  ?>
+				  ?>		
 
 					  <div class="grid-item grid-item-1 span-<?php echo $i; ?>">
 						 
@@ -39,6 +43,29 @@ get_header();?>
 					  <?php $i++; endforeach; endif; ?> 
 
 			 </div>
+			 <?php }else{ ?>
+
+			 <div id="galeria" class="owl-carousel owl-theme about-img">
+						
+				<?php $images = acf_photo_gallery('galeria', $post->ID); 
+				if( count($images) ):
+					//Cool, we got some data so now let's loop over it
+					foreach($images as $image):
+						$id = $image['id']; // The attachment id of the media
+						$title = $image['title']; //The title
+						$full_image_url= $image['full_image_url']; //Full size image url
+						$alt = get_field('photo_gallery_alt', $id); //Get the alt which is a extra field (See below how to add extra fields)
+						$full_image_url = acf_photo_gallery_resize_image($full_image_url, 650, 560); //Resized size to 262px width by 160px height image url
+
+				?>
+				<img src="<?php echo $full_image_url; ?>">
+			
+				<?php endforeach; endif; ?>
+			</div>
+			
+			<?php } ?>
+
+
 		</div>
 
 	</div>

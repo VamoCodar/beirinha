@@ -359,23 +359,22 @@ a {
   }
 
   .favorito {
-    color: #bcbcbc;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 35.280003px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: 0.3s;
 
     &:hover {
       color: $laranja;
-
-      span {
-        transform: scale(1.1);
-      }
     }
-
     span {
+        color: #bcbcbc;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 35.280003px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        display: inline-block;
+      }
+    
+    i {
       vertical-align: middle;
       display: inline-block;
       margin-right: 5px;
@@ -390,8 +389,28 @@ a {
 
       &:hover {
         transform: scale(1.1);
+        transition: 0.3s;
+
       }
+      
     }
+  }
+  .favorito i::before{
+      display: none !important;
+      content: "" !important;
+  }
+  .woocommerce a.button{
+    padding: none !important;
+  }
+  .favorito .button{
+      background: none !important;
+      padding: 10px 0 !important;
+  }
+  .beirinha-cart-add .yith-wcwl-add-button span{
+    display: block !important;
+  }
+  .single-favorito a{
+    border-radius: 50% !important; 
   }
 
   .single-menos,
